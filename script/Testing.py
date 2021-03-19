@@ -59,7 +59,7 @@ def evaluate_classifier_standard(
             listOfClassifier[currPos].score(X_transformer_test, y_test_fold)
         )
         currPos += 1
-    positionOfMinVal = listOfAccur.index(min(listOfAccur))
+    # positionOfMinVal = listOfAccur.index(min(listOfAccur))
     positionOfMaxVal = listOfAccur.index(max(listOfAccur))
     return listOfClassifier[positionOfMaxVal], classifierMetrics[positionOfMaxVal]
 

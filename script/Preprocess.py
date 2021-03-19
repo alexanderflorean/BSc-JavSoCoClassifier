@@ -90,38 +90,11 @@ JAVA_ANNOTATIONS = {
     "@Repeatable",
 }
 ACCESS_MODIFIERS = {"public", "private", "protected"}
-PARSING_COMMANDS = [
-    "Parsing commands (order matter) ...",
-    "Lower case: 'lc'",
-    "Remove single characters:  'sc'",
-    "Remove stop words: 'sw'",
-    "Remove java keywords: 'jk'",
-    "Remove java annotations: 'ja'",
-    "Remove java syntax ('jk','ja','sc'): 'js'",
-    "Remove english stopwords: 'es'",
-    "Remove numbers: 'nu'",
-    "Separate compound words: 'scw'",
-    "Default, then exit preprocess: 'd'",
-    "Clear commands: 'clear'",
-]
-EXTRACTION_COMMANDS = [
-    "Extraction commands ...",
-    "Use raw data: 'raw'",
-    "Classes: 'c'",
-    "Public methods: 'pm'",
-    "Public variables/objects: 'pv'",
-    "All methods: 'am'",
-    "All variables/objects: 'av'",
-    "Import and packages: 'lib",
-    "Comments: 'com'",
-    "Clear commands: 'clear'",
-]
 
 
 class Preprocess:
-    hej = 0
 
-    def __init__(self, settings, csv_processed_filepath):
+    def __init__(self, settings, csv_processed_filepath: str):
 
         self.dataframe = get_raw_dataset_as_dataframe()
         self.csv_processed_filepath = csv_processed_filepath
@@ -224,7 +197,7 @@ class Preprocess:
             else:
                 raise ValueError('Parser: "' + choice + '" is not a option.')
 
-    def update_extraction_list(self, choice):
+    def update_extraction_list(self, choice: str):
         if choice == "raw":
             self.extraction_list.append(partial(self.extractor.use_raw_data))
         elif choice == "c":

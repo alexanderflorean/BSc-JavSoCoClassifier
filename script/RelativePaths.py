@@ -1,7 +1,11 @@
 from pathlib import Path
 
+"""
+returns a path object that tells where the file is relative to the current
+folder
+"""
 
-# Returns path object, needs to converted to string to be used
+
 def getCurrentDirectory():
     return Path.cwd()
 
