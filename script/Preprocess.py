@@ -93,7 +93,9 @@ ACCESS_MODIFIERS = {"public", "private", "protected"}
 
 
 class Preprocess:
-
+    """
+    Uses 2 clases to extract, parse then save the parsed data into a csv file
+    """
     def __init__(self, settings, csv_processed_filepath: str):
 
         self.dataframe = get_raw_dataset_as_dataframe()
@@ -106,6 +108,10 @@ class Preprocess:
         self.parser = Parser()
 
     def preprocess_data(self):
+        """
+        For every fow in 'Filecontent', extract and parse according to
+        the given settings and replace the raw data with the parsed data.
+        """
         for index, row in self.dataframe.iterrows():
             raw_data = row["FileContent"]
             processed_data = self.process_according_settings(raw_data)
@@ -125,6 +131,7 @@ class Preprocess:
 
             extracted_data = self.extract_data_from_string(raw_data)
             processed_data.extend(self.parse_list_of_strings(extracted_data))
+
             self.update_extraction_list("clear")
             self.update_parsing_list(["clear"])
         return processed_data
@@ -229,7 +236,7 @@ class Preprocess:
 class Parser:
     """
     Takes in a list of strings, returns the parsed list of strings according
-    to chosen methods. The input data needs to be tokenized
+    to chosen methods. The input data needs to be tokenized.
     """
 
     def __init__(self, raw_data_list=[]):
@@ -300,22 +307,22 @@ class Parser:
         self.parsed_data = [ps.stem(word) for word in tmp_list]
 
     """
-    Following functions inputs a string, and appends result to parsed_data
+    Following functions inputs a string, and appends result to self.parsed_data
     """
 
     def tokenize_words_and_characters(self, item):
         self.parsed_data.extend(nltk.wordpunct_tokenize(item))
 
-    # Removes all special characters (incl. puncuation) and appends the result
-    # to the parsed_data list
     def tokenize_only_words(self, item):
+        # Removes all special characters (incl. puncuation) and appends the
+        # result to the parsed_data list
         tokenizer = RegexpTokenizer(r"\w+")
         result = tokenizer.tokenize(item)
         self.parsed_data.extend(result)
 
-    # Tokenizes only words and compound words, characters and numbers gets
-    # removed automatically
     def separate_compound_string(self, item):
+        # Tokenizes only words and compound words, characters and numbers gets
+        # removed automatically
         r = RegexpTokenizer(r"([A-Z]*[a-z]*)")
         return list(filter(None, r.tokenize(item)))
 
@@ -360,6 +367,7 @@ class DataExtractor:
         self.extracted_data.extend(result)
         return result
 
+    # TODO: valid extraction?
     def extract_classes(self):
         result = []
         rule_class_declaration = r"(?<=class\s).*?(?=[\s]*{)"
@@ -380,6 +388,7 @@ class DataExtractor:
         self.extracted_data.extend(result)
         return result
 
+    # TODO: valid extraction?
     def extract_public_functions(self):
         result = []
         rule_1 = r"(?<=public\s.*)\w+(?=\()"
@@ -392,7 +401,7 @@ class DataExtractor:
         self.extracted_data.extend(result)
         return result
 
-    # TODO:create test for implementation
+    # TODO: valid extraction?
     def extract_public_variables(self):
         rule = r"(?<=public\s)(\w.*)(?=\s=)"
         # to add and create test
@@ -423,11 +432,6 @@ def get_processed_csv_path():
 
 def raw_data():
     return pd.read_csv(RP.getRawDataSet())
-
-
-def custom(extraction, parsing, f_path):
-    df = Preprocess(extraction, parsing, f_path).preprocess_data()
-    return df
 
 
 def default():

@@ -361,6 +361,6 @@ def test_Parser_stem_words_from_parsed_data():
 
 
 def get_test_input(size=-1):
-    with open(test_input_filename) as f:
+    with open('../tests/' + test_input_filename) as f:
         test_input = f.read(size)
     return test_input
