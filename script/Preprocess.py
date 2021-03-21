@@ -3,10 +3,11 @@ from functools import partial
 import nltk
 import pandas as pd
 import regex
-import RelativePaths as RP
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.tokenize import RegexpTokenizer
+
+import RelativePaths as RP
 
 STOP_WORDS = set(stopwords.words("english"))
 JAVA_KEYWORDS = {
@@ -96,6 +97,7 @@ class Preprocess:
     """
     Uses 2 clases to extract, parse then save the parsed data into a csv file
     """
+
     def __init__(self, settings, csv_processed_filepath: str):
 
         self.dataframe = get_raw_dataset_as_dataframe()
