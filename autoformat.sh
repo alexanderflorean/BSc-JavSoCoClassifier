@@ -1,6 +1,7 @@
 #!/bin/bash
 #If you get permission error, run 
 #chmod +rx autoformat.sh
+# Need to have black and isort installed to run the script
 
 #Formats the sorts the import statements 
 echo 'Running isort ... '

@@ -1,7 +1,4 @@
-# python==3.8.5
 jupyterlab==3.0.10
-black==19.3b0
-isort==5.7.0
 numpy==1.18.0
 pandas==1.2.2
 matplotlib==3.3.4
