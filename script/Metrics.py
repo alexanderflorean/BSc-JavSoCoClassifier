@@ -89,6 +89,20 @@ class Metric:
         return table
 
     def plot_support_table(self, axis=None):
+        table = self.quantity_table()
+        sns.heatmap(
+            table,
+            cmap="YlGnBu",
+            annot=True,
+            linewidths=0.5,
+            fmt="d",
+            ax=axis,
+            annot_kws={"size": 15},
+        )
+        plt.show()
+        return
+
+    def quantity_table(self):
         cf_report = self.get_classification_report()
         df = pd.DataFrame(cf_report).transpose()
         dfSupport = df.drop(["accuracy", "macro avg", "weighted avg"])
@@ -112,17 +126,7 @@ class Metric:
             },
             index=y_labels,
         )
-        sns.heatmap(
-            table,
-            cmap="YlGnBu",
-            annot=True,
-            linewidths=0.5,
-            fmt="d",
-            ax=axis,
-            annot_kws={"size": 15},
-        )
-        plt.show()
-        return
+        return table
 
     def plot_data_info(self, axis=None):
         cf_report = self.get_classification_report()
@@ -248,6 +252,16 @@ class Metric:
             )
 
         return listOfAverages
+
+    def total_report_table(self):
+        """
+        Appends the quantities of labels to the classification report table
+        """
+        classification_report = pd.DataFrame(self.get_classification_report())
+        quantity_table = self.quantity_table()
+        quantity_table = quantity_table.transpose()
+        total_df = classification_report.append(quantity_table)
+        return total_df
 
     """ Comandline printing """
 
