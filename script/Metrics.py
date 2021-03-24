@@ -153,6 +153,7 @@ class Metric:
         numOfFigures = numOfLabels
 
         figure = plt.figure(figsize=(10, 10))
+        figure.suptitle("Classifier: "+self.name,fontsize = 28)
         gridspace = figure.add_gridspec(int(numOfFigures), hspace=1)
         axes = gridspace.subplots()
         for index in range(int(numOfFigures)):
