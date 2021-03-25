@@ -8,6 +8,7 @@ from sklearn.metrics import (
     confusion_matrix,
     matthews_corrcoef,
     precision_score,
+    recall_score
 )
 
 
@@ -60,6 +61,13 @@ class Metric:
 
     def get_precision_score(self):
         return precision_score(self.y_test, self.y_pred, average="macro")
+
+    def get_accuracy_score(self):
+        return accuracy_score(self.y_test,self.y_pred)
+
+    def get_recall_score(self):
+        return recall_score(self.y_test,self.y_pred, average="macro")
+
 
     # plots the classification report table
     def plot_table_info(self, axis=None):
