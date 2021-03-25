@@ -15,6 +15,28 @@ def plot_horizontal_graphs(metrics: dict, graph_type: str):
         fig3 = visualize_normalized_confusion_matrix(metrics['Naive'], axis[2])
         plt.tight_layout()
         plt.show()
+    elif graph_type == 'regular':
+        fig, axis = plt.subplots(1, 3, figsize=(20, 5))
+        axis[0].set_title(metrics['maxEnt'].name + " Confusion-matrix", fontsize=15)
+        axis[1].set_title(metrics['SVM'].name + " Confusion-matrix", fontsize=15)
+        axis[2].set_title(metrics['Naive'].name + " Confusion-matrix", fontsize=15)
+        fig1 = visualize_normalized_confusion_matrix(metrics['maxEnt'], axis[0])
+        fig2 = visualize_normalized_confusion_matrix(metrics['SVM'], axis[1])
+        fig3 = visualize_normalized_confusion_matrix(metrics['Naive'], axis[2])
+        plt.tight_layout()
+        plt.show()
+    elif graph_type == 'report':
+        fig, axis = plt.subplots(1, 4, figsize=(24, 6))
+        axis[0].set_title(metrics['maxEnt'].name + " Classification report", fontsize=18)
+        axis[1].set_title(metrics['SVM'].name + " Classification report", fontsize=18)
+        axis[2].set_title(metrics['Naive'].name + " Classification report", fontsize=18)
+        axis[3].set_title("Quantity of files for given concern", fontsize=18)
+        fig1 = plot_data_info(metrics['maxEnt'], axis[0])
+        fig2 = plot_data_info(metrics['SVM'], axis[1])
+        fig3 = plot_data_info(metrics['Naive'], axis[2])
+        plot_support_table(metrics['Naive'], axis[3])
+        plt.tight_layout()
+        plt.show()
 
 
 def plot_line_graph(title: str, x_axis, y_axis: dict, x_axis_name, y_axis_name):
