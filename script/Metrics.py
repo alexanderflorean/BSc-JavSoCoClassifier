@@ -60,13 +60,15 @@ class Metric:
         )
 
     def get_precision_score(self):
-        return precision_score(self.y_test, self.y_pred, average="macro")
+        return precision_score(self.y_test, self.y_pred, average="macro",
+                zero_division=False)
 
     def get_accuracy_score(self):
         return accuracy_score(self.y_test,self.y_pred)
 
     def get_recall_score(self):
-        return recall_score(self.y_test,self.y_pred, average="macro")
+        return recall_score(self.y_test,self.y_pred, average="macro",
+                zero_division=False)
 
 
     # plots the classification report table
@@ -117,7 +119,6 @@ class Metric:
         dfSupport = dfSupport.support
 
         numOfLabels = self.dataFrame.Label.count()
-        print(numOfLabels)
         label = self.dataFrame.Label.unique()
         label.sort()
         y_labels = self.dataFrame.Label.unique()
