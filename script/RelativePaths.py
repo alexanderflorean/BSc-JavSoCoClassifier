@@ -15,8 +15,13 @@ def getParentDirectory():
 
 
 def getJabRefDirectory():
-    return getParentDirectory() / "JabRef_architecture"
+    return getParentDirectory() / "architectures/JabRef_architecture"
 
+def getPromDirectory():
+    return getParentDirectory() / "architectures/ProM_architecture"
+
+def getTeamMatesDirectory():
+    return getParentDirectory() / "architectures/TEAMMATES_architecture"
 
 def getDataDirectory():
     return getParentDirectory() / "Data"

@@ -24,7 +24,7 @@ def read_files_to_csv(path, label, csv_file):
             if _file.endswith(".java"):
                 file_content = get_file_content(path, _file)
                 write_to_dataset(csv_file, _file, label, file_content)
-            else:
+            elif(isdir(path + "/" + _file)):
                 read_files_to_csv(path + "/" + _file, label, csv_file)
 
 
@@ -47,6 +47,18 @@ def gather_jabref_data():
     jabrefDir = RP.getJabRefDirectory()
     labels = gather_labels_from_folder_names(jabrefDir)
     gather_data_from_directory(jabrefDir, labels)
+
+
+def gather_prom_data():
+    prom_dir = RP.getPromDirectory()
+    labels = gather_labels_from_folder_names(prom_dir)
+    gather_data_from_directory(prom_dir, labels)
+
+
+def gather_team_mates_data():
+    team_dir = RP.getTeamMatesDirectory()
+    labels = gather_labels_from_folder_names(team_dir)
+    gather_data_from_directory(team_dir, labels)
 
 
 def gather_data_from_directory(path, labels):
