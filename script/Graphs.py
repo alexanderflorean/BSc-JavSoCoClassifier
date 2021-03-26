@@ -3,6 +3,8 @@ import seaborn as sns
 import pandas as pd
 import numpy as np
 
+NUM_OF_CLASSES_CAP = 6
+
 
 def plot_horizontal_graphs(metrics: dict, graph_type: str):
     if graph_type == 'norm':
@@ -20,9 +22,9 @@ def plot_horizontal_graphs(metrics: dict, graph_type: str):
         axis[0].set_title(metrics['maxEnt'].name + " Confusion-matrix", fontsize=15)
         axis[1].set_title(metrics['SVM'].name + " Confusion-matrix", fontsize=15)
         axis[2].set_title(metrics['Naive'].name + " Confusion-matrix", fontsize=15)
-        fig1 = visualize_normalized_confusion_matrix(metrics['maxEnt'], axis[0])
-        fig2 = visualize_normalized_confusion_matrix(metrics['SVM'], axis[1])
-        fig3 = visualize_normalized_confusion_matrix(metrics['Naive'], axis[2])
+        fig1 = visualize_confusion_matrix(metrics['maxEnt'], axis[0])
+        fig2 = visualize_confusion_matrix(metrics['SVM'], axis[1])
+        fig3 = visualize_confusion_matrix(metrics['Naive'], axis[2])
         plt.tight_layout()
         plt.show()
     elif graph_type == 'report':
@@ -125,12 +127,18 @@ def plot_predictionScoreAverage(metrics, classifier):
     listofAverage = metrics.getPredictionScoreAverage(classifier)
     listOflabels = metrics.dataFrame.Label.unique()
     listOflabels.sort()
+    horizontal_space = 1
     numOfLabels = len(listofAverage)
     numOfFigures = numOfLabels
 
-    figure = plt.figure(figsize=(10, 10))
-    figure.suptitle("Classifier: " + metrics.name, fontsize=28)
-    gridspace = figure.add_gridspec(int(numOfFigures), hspace=1)
+    ##For many concerns, plots more evenly
+    if NUM_OF_CLASSES_CAP < numOfLabels:
+        horizontal_space = 4
+
+    figure = plt.figure(figsize=(15, 15))
+    figure.suptitle("Classifier: " + metrics.name, fontsize = 15)
+
+    gridspace = figure.add_gridspec(int(numOfFigures), hspace=horizontal_space)
     axes = gridspace.subplots()
     for index in range(int(numOfFigures)):
         averageScore = [
@@ -149,7 +157,7 @@ def plot_predictionScoreAverage(metrics, classifier):
             )
 
         title = metrics.listOfAveragePrediction[index]
-        axes[index].set_title(title, pad=12, fontsize=20)
+        axes[index].set_title(title, pad=12)
         axes[index].set(ylabel="Prediction probability")
     plt.show()
 
@@ -166,7 +174,7 @@ def visualize_normalized_confusion_matrix(metrics, axis=None):
         cmap="YlGnBu",
         fmt=".1%",
         ax=axis,
-        annot_kws={"size": 15},
+        annot_kws={"size": 10},
     )
     return fig
 
@@ -183,6 +191,7 @@ def visualize_confusion_matrix(metrics, axis=None):
         cmap="YlGnBu",
         fmt="d",
         ax=axis,
+        annot_kws={"size": 10}
     )
     return fig
 
