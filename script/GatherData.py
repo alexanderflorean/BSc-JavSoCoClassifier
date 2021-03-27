@@ -3,11 +3,9 @@ import os
 from os import listdir, stat
 from os.path import isdir, join
 
-import RelativePaths as RP
 
-
-def collect_data(path, label):
-    csv_file_name = get_raw_data_file_name()
+def collect_data(path, label, save_file):
+    csv_file_name = save_file
     field_names = get_field_names()
     with open(csv_file_name, "a", newline="", encoding="UTF-8") as f:
         csv_file = csv.DictWriter(f, field_names)
@@ -43,37 +41,23 @@ def get_file_content(path, _file):
     return file_content
 
 
-def gather_jabref_data():
-    jabrefDir = RP.getJabRefDirectory()
-    labels = gather_labels_from_folder_names(jabrefDir)
-    gather_data_from_directory(jabrefDir, labels)
+def gather_architectural_concerns_data(folder, save_file):
+    labels = gather_labels_from_folder_names(folder)
+    gather_data_from_directory(folder, labels, save_file)
 
 
-def gather_prom_data():
-    prom_dir = RP.getPromDirectory()
-    labels = gather_labels_from_folder_names(prom_dir)
-    gather_data_from_directory(prom_dir, labels)
-
-
-def gather_team_mates_data():
-    team_dir = RP.getTeamMatesDirectory()
-    labels = gather_labels_from_folder_names(team_dir)
-    gather_data_from_directory(team_dir, labels)
-
-
-def gather_data_from_directory(path, labels):
-    update_csv_file()
+def gather_data_from_directory(path, labels, save_file):
+    update_csv_file(save_file)
     for label in labels:
-        directory = str(path / label)
-        collect_data(directory, label)
+        directory = path + '/' + label
+        collect_data(directory, label, save_file)
 
 
 # Removes the file if the file is not empty
-def update_csv_file():
-    file_name = get_raw_data_file_name()
-    if os.path.isfile(file_name) is True:
-        with open(file_name, "r+", encoding="UTF-8") as f:
-            if stat(file_name).st_size != 0:
+def update_csv_file(save_file):
+    if os.path.isfile(save_file) is True:
+        with open(save_file, "r+", encoding="UTF-8") as f:
+            if stat(save_file).st_size != 0:
                 f.truncate()
 
 
@@ -85,13 +69,5 @@ def gather_labels_from_folder_names(path):
     return labels
 
 
-def get_raw_data_file_name():
-    return str(RP.getRawDataSet())
-
-
 def get_field_names():
     return ["FileName", "Label", "FileContent"]
-
-
-if __name__ == "__main__":
-    gather_jabref_data()

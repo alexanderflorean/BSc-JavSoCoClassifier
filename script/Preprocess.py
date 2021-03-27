@@ -7,7 +7,6 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.tokenize import RegexpTokenizer
 
-import RelativePaths as RP
 
 STOP_WORDS = set(stopwords.words("english"))
 JAVA_KEYWORDS = {
@@ -98,9 +97,9 @@ class Preprocess:
     Uses 2 clases to extract, parse then save the parsed data into a csv file
     """
 
-    def __init__(self, settings, csv_processed_filepath: str):
+    def __init__(self, settings, csv_raw_data_filepath: str, csv_processed_filepath: str):
 
-        self.dataframe = get_raw_dataset_as_dataframe()
+        self.dataframe = pd.read_csv(csv_raw_data_filepath)
         self.csv_processed_filepath = csv_processed_filepath
 
         self.settings = settings
@@ -423,38 +422,6 @@ class DataExtractor:
         return result
 
 
-def get_raw_dataset_as_dataframe():
-    csv_file_name = str(RP.getRawDataSet())
-    return pd.read_csv(csv_file_name)
-
-
-def get_processed_csv_path():
-    return str(RP.get_processed_dataset())
-
-
-def raw_data():
-    return pd.read_csv(RP.getRawDataSet())
-
-
-def default():
-    """
-    Basic parsing
-    1. Word tokenize the whole file, removing special characters with the following regex 'w+'.
-    2. Remove java keywords.
-    3. Separate composite words (e.g. 'getFieldNames' = 'get', 'Field', 'Names')
-    4. Lower case the tokens
-    """
-    fn = str(RP.get_basic_preprocessing_csv())
-    settings = [["raw", "tow", "jk", "scw", "lc"]]
-
-    df = Preprocess(settings, fn).preprocess_data()
+def preprocess_settings(settings, raw_data_file, save_file):
+    df = Preprocess(settings, raw_data_file, save_file).preprocess_data()
     return df
-
-
-def preprocess_settings(settings, fn):
-    df = Preprocess(settings, fn).preprocess_data()
-    return df
-
-
-if __name__ == "__main__":
-    default()

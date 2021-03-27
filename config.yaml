@@ -1,4 +1,29 @@
-settings list:
+file locations:
+    jabref:
+        system folder: 'architectures/JabRef_architecture'
+        raw data: 'Data/jabref/rawdata.csv'
+        tmp data: 'Data/jabref/tmp.csv'
+        single setting preprocessing: 'Data/jabref/single_prep.csv'
+        preprocess comparisons: 'Data/jabref/prep_comparisons.csv'
+        data size percentage: 'Data/jabref/size_percentage.csv'
+        data size abs num: 'Data/jabref/size_abs.csv'
+    prom:
+        system folder: 'architectures/ProM_architecture'
+        raw data: 'Data/prom/rawdata.csv'
+        tmp data: 'Data/prom/tmp.csv'
+        single setting preprocessing: 'Data/prom/single_prep.csv'
+        preprocess comparisons: 'Data/prom/prep_comparisons.csv'
+        data size percentage: 'Data/prom/size_percentage.csv'
+        data size abs num: 'Data/prom/size_abs.csv'
+    team:
+        system folder: 'architectures/TEAMMATES_architecture'
+        raw data: 'Data/team/rawdata.csv'
+        tmp data: 'Data/team/tmp.csv'
+        single setting preprocessing: 'Data/team/single_prep.csv'
+        preprocess comparisons: 'Data/team/prep_comparisons.csv'
+        data size percentage: 'Data/team/size_percentage.csv'
+        data size abs num: 'Data/team/size_abs.csv'
+preprocess settings list:
     s0:
         [
             ['lib', 'tow', 'jk', 'scw','lc', 'stem'],

@@ -1,0 +1,241 @@
+classifier,setting_id,settings,accuracy,w_avg_precision,w_avg_recall,train_size,test_size,report_table
+MaxEnt,s0,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk']]",0.8740157480314961,0.8899189199334435,0.8740157480314961,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision            0.076923          0.950000  ...    0.797581      0.889919
+recall               0.111111          0.926829  ...    0.781843      0.874016
+f1-score             0.090909          0.938272  ...    0.781812      0.875212
+support              9.000000         41.000000  ...  762.000000    762.000000
+Test                 9.000000         41.000000  ...         NaN           NaN
+Train                1.000000          5.000000  ...         NaN           NaN
+Total               10.000000         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+SVM,s0,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk']]",0.8385826771653543,0.8407134868224255,0.8385826771653543,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision            0.214286          0.863636  ...    0.756006      0.840713
+recall               0.333333          0.926829  ...    0.751410      0.838583
+f1-score             0.260870          0.894118  ...    0.748716      0.836993
+support              9.000000         41.000000  ...  762.000000    762.000000
+Test                 9.000000         41.000000  ...         NaN           NaN
+Train                1.000000          5.000000  ...         NaN           NaN
+Total               10.000000         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+Naive-Bayes,s0,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk']]",0.8713910761154856,0.8876642528278013,0.8713910761154856,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision            0.357143          0.969697  ...    0.819783      0.887664
+recall               0.555556          0.780488  ...    0.831960      0.871391
+f1-score             0.434783          0.864865  ...    0.819089      0.875411
+support              9.000000         41.000000  ...  762.000000    762.000000
+Test                 9.000000         41.000000  ...         NaN           NaN
+Train                1.000000          5.000000  ...         NaN           NaN
+Total               10.000000         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+MaxEnt,s1,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw']]",0.8202099737532809,0.818745221304553,0.8202099737532809,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision            0.142857          0.795918  ...    0.717996      0.818745
+recall               0.111111          0.951220  ...    0.722832      0.820210
+f1-score             0.125000          0.866667  ...    0.716615      0.816697
+support              9.000000         41.000000  ...  762.000000    762.000000
+Test                 9.000000         41.000000  ...         NaN           NaN
+Train                1.000000          5.000000  ...         NaN           NaN
+Total               10.000000         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+SVM,s1,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw']]",0.7677165354330708,0.7832770952714627,0.7677165354330708,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision            0.071429          0.708333  ...    0.660947      0.783277
+recall               0.111111          0.829268  ...    0.673976      0.767717
+f1-score             0.086957          0.764045  ...    0.658429      0.768854
+support              9.000000         41.000000  ...  762.000000    762.000000
+Test                 9.000000         41.000000  ...         NaN           NaN
+Train                1.000000          5.000000  ...         NaN           NaN
+Total               10.000000         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+Naive-Bayes,s1,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw']]",0.8031496062992126,0.8501674081775189,0.8031496062992126,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision            0.119048          1.000000  ...    0.767978      0.850167
+recall               0.555556          0.731707  ...    0.771062      0.803150
+f1-score             0.196078          0.845070  ...    0.743844      0.817291
+support              9.000000         41.000000  ...  762.000000    762.000000
+Test                 9.000000         41.000000  ...         NaN           NaN
+Train                1.000000          5.000000  ...         NaN           NaN
+Total               10.000000         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+MaxEnt,s2,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7624671916010499,0.7613241829266713,0.7624671916010499,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision                 0.0          0.688889  ...    0.646106      0.761324
+recall                    0.0          0.756098  ...    0.644294      0.762467
+f1-score                  0.0          0.720930  ...    0.639625      0.758294
+support                   9.0         41.000000  ...  762.000000    762.000000
+Test                      9.0         41.000000  ...         NaN           NaN
+Train                     1.0          5.000000  ...         NaN           NaN
+Total                    10.0         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+SVM,s2,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7086614173228346,0.7102065777325125,0.7086614173228346,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision                 0.0          0.636364  ...    0.595368      0.710207
+recall                    0.0          0.682927  ...    0.597572      0.708661
+f1-score                  0.0          0.658824  ...    0.595183      0.708419
+support                   9.0         41.000000  ...  762.000000    762.000000
+Test                      9.0         41.000000  ...         NaN           NaN
+Train                     1.0          5.000000  ...         NaN           NaN
+Total                    10.0         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+Naive-Bayes,s2,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7860892388451444,0.8148209624590244,0.7860892388451444,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision            0.285714          1.000000  ...    0.748271      0.814821
+recall               0.444444          0.682927  ...    0.741628      0.786089
+f1-score             0.347826          0.811594  ...    0.726475      0.787905
+support              9.000000         41.000000  ...  762.000000    762.000000
+Test                 9.000000         41.000000  ...         NaN           NaN
+Train                1.000000          5.000000  ...         NaN           NaN
+Total               10.000000         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+MaxEnt,s3,"[['pac', 'tow', 'jk'], ['lib', 'tow', 'scw', 'jk', 'lc', 'stem'], ['pm', 'tow', 'scw', 'jk', 'lc', 'sw']]",0.7847769028871391,0.7956304529803299,0.7847769028871391,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision                 0.0          0.857143  ...    0.684924      0.795630
+recall                    0.0          0.731707  ...    0.661356      0.784777
+f1-score                  0.0          0.789474  ...    0.666651      0.785550
+support                   9.0         41.000000  ...  762.000000    762.000000
+Test                      9.0         41.000000  ...         NaN           NaN
+Train                     1.0          5.000000  ...         NaN           NaN
+Total                    10.0         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+SVM,s3,"[['pac', 'tow', 'jk'], ['lib', 'tow', 'scw', 'jk', 'lc', 'stem'], ['pm', 'tow', 'scw', 'jk', 'lc', 'sw']]",0.7677165354330708,0.7706801521807806,0.7677165354330708,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision            0.750000          0.633333  ...    0.745399      0.770680
+recall               0.333333          0.463415  ...    0.659227      0.767717
+f1-score             0.461538          0.535211  ...    0.684582      0.762542
+support              9.000000         41.000000  ...  762.000000    762.000000
+Test                 9.000000         41.000000  ...         NaN           NaN
+Train                1.000000          5.000000  ...         NaN           NaN
+Total               10.000000         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+Naive-Bayes,s3,"[['pac', 'tow', 'jk'], ['lib', 'tow', 'scw', 'jk', 'lc', 'stem'], ['pm', 'tow', 'scw', 'jk', 'lc', 'sw']]",0.8188976377952756,0.8363330108323442,0.8188976377952756,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision            0.833333          0.939394  ...    0.820379      0.836333
+recall               0.555556          0.756098  ...    0.771755      0.818898
+f1-score             0.666667          0.837838  ...    0.784349      0.820719
+support              9.000000         41.000000  ...  762.000000    762.000000
+Test                 9.000000         41.000000  ...         NaN           NaN
+Train                1.000000          5.000000  ...         NaN           NaN
+Total               10.000000         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+MaxEnt,s4,"[['lib', 'tow', 'scw', 'jk', 'lc', 'stem'], ['pac', 'tow', 'jk'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pm', 'tow', 'scw', 'jk', 'lc', 'sw', 'stem'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7624671916010499,0.7816182133879184,0.7624671916010499,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision                 0.0          0.935484  ...    0.685181      0.781618
+recall                    0.0          0.707317  ...    0.642036      0.762467
+f1-score                  0.0          0.805556  ...    0.652931      0.763569
+support                   9.0         41.000000  ...  762.000000    762.000000
+Test                      9.0         41.000000  ...         NaN           NaN
+Train                     1.0          5.000000  ...         NaN           NaN
+Total                    10.0         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+SVM,s4,"[['lib', 'tow', 'scw', 'jk', 'lc', 'stem'], ['pac', 'tow', 'jk'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pm', 'tow', 'scw', 'jk', 'lc', 'sw', 'stem'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7204724409448819,0.7257275911489754,0.7204724409448819,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision            1.000000          0.750000  ...    0.720824      0.725728
+recall               0.111111          0.731707  ...    0.614407      0.720472
+f1-score             0.200000          0.740741  ...    0.622903      0.714350
+support              9.000000         41.000000  ...  762.000000    762.000000
+Test                 9.000000         41.000000  ...         NaN           NaN
+Train                1.000000          5.000000  ...         NaN           NaN
+Total               10.000000         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+Naive-Bayes,s4,"[['lib', 'tow', 'scw', 'jk', 'lc', 'stem'], ['pac', 'tow', 'jk'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pm', 'tow', 'scw', 'jk', 'lc', 'sw', 'stem'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.8057742782152231,0.8330171225354548,0.8057742782152231,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision            1.000000          0.970588  ...    0.835133      0.833017
+recall               0.555556          0.804878  ...    0.781991      0.805774
+f1-score             0.714286          0.880000  ...    0.788574      0.808483
+support              9.000000         41.000000  ...  762.000000    762.000000
+Test                 9.000000         41.000000  ...         NaN           NaN
+Train                1.000000          5.000000  ...         NaN           NaN
+Total               10.000000         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+MaxEnt,s5,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7677165354330708,0.7690983129776008,0.7677165354330708,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision                 0.0          0.815789  ...    0.663251      0.769098
+recall                    0.0          0.756098  ...    0.644590      0.767717
+f1-score                  0.0          0.784810  ...    0.647682      0.764432
+support                   9.0         41.000000  ...  762.000000    762.000000
+Test                      9.0         41.000000  ...         NaN           NaN
+Train                     1.0          5.000000  ...         NaN           NaN
+Total                    10.0         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+SVM,s5,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7152230971128609,0.7235492207138193,0.7152230971128609,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision                 0.0          0.750000  ...    0.617493      0.723549
+recall                    0.0          0.658537  ...    0.599722      0.715223
+f1-score                  0.0          0.701299  ...    0.606567      0.718005
+support                   9.0         41.000000  ...  762.000000    762.000000
+Test                      9.0         41.000000  ...         NaN           NaN
+Train                     1.0          5.000000  ...         NaN           NaN
+Total                    10.0         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+Naive-Bayes,s5,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7979002624671916,0.8204182424443744,0.7979002624671916,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision            0.333333          1.000000  ...    0.757728      0.820418
+recall               0.333333          0.731707  ...    0.748567      0.797900
+f1-score             0.333333          0.845070  ...    0.740904      0.799734
+support              9.000000         41.000000  ...  762.000000    762.000000
+Test                 9.000000         41.000000  ...         NaN           NaN
+Train                1.000000          5.000000  ...         NaN           NaN
+Total               10.000000         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+MaxEnt,s6,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw']]",0.7716535433070866,0.7734691845694287,0.7716535433070866,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision                 0.0          0.888889  ...    0.671420      0.773469
+recall                    0.0          0.780488  ...    0.650437      0.771654
+f1-score                  0.0          0.831169  ...    0.654264      0.768583
+support                   9.0         41.000000  ...  762.000000    762.000000
+Test                      9.0         41.000000  ...         NaN           NaN
+Train                     1.0          5.000000  ...         NaN           NaN
+Total                    10.0         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+SVM,s6,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw']]",0.7060367454068242,0.7170784581784848,0.7060367454068242,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision                 0.0          0.722222  ...    0.614280      0.717078
+recall                    0.0          0.634146  ...    0.590420      0.706037
+f1-score                  0.0          0.675325  ...    0.599736      0.709675
+support                   9.0         41.000000  ...  762.000000    762.000000
+Test                      9.0         41.000000  ...         NaN           NaN
+Train                     1.0          5.000000  ...         NaN           NaN
+Total                    10.0         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+Naive-Bayes,s6,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw']]",0.7965879265091863,0.8234446214061004,0.7965879265091863,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision            0.444444          1.000000  ...    0.771786      0.823445
+recall               0.444444          0.731707  ...    0.755003      0.796588
+f1-score             0.444444          0.845070  ...    0.748514      0.798470
+support              9.000000         41.000000  ...  762.000000    762.000000
+Test                 9.000000         41.000000  ...         NaN           NaN
+Train                1.000000          5.000000  ...         NaN           NaN
+Total               10.000000         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+MaxEnt,s7,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc'], ['pv', 'tow', 'jk', 'scw', 'lc'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc']]",0.7703412073490814,0.7728771955925609,0.7703412073490814,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision                 0.0          0.888889  ...    0.669898      0.772877
+recall                    0.0          0.780488  ...    0.650567      0.770341
+f1-score                  0.0          0.831169  ...    0.653204      0.767389
+support                   9.0         41.000000  ...  762.000000    762.000000
+Test                      9.0         41.000000  ...         NaN           NaN
+Train                     1.0          5.000000  ...         NaN           NaN
+Total                    10.0         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+SVM,s7,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc'], ['pv', 'tow', 'jk', 'scw', 'lc'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc']]",0.7020997375328084,0.7103414063116394,0.7020997375328084,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision                 0.0          0.729730  ...    0.605935      0.710341
+recall                    0.0          0.658537  ...    0.586830      0.702100
+f1-score                  0.0          0.692308  ...    0.594718      0.705035
+support                   9.0         41.000000  ...  762.000000    762.000000
+Test                      9.0         41.000000  ...         NaN           NaN
+Train                     1.0          5.000000  ...         NaN           NaN
+Total                    10.0         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
+Naive-Bayes,s7,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc'], ['pv', 'tow', 'jk', 'scw', 'lc'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc']]",0.7992125984251969,0.8255166675909328,0.7992125984251969,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
+precision            0.444444          1.000000  ...    0.772400      0.825517
+recall               0.444444          0.731707  ...    0.757588      0.799213
+f1-score             0.444444          0.845070  ...    0.750990      0.801508
+support              9.000000         41.000000  ...  762.000000    762.000000
+Test                 9.000000         41.000000  ...         NaN           NaN
+Train                1.000000          5.000000  ...         NaN           NaN
+Total               10.000000         46.000000  ...         NaN           NaN
+
+[7 rows x 12 columns]"
