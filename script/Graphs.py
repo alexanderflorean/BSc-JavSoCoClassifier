@@ -239,3 +239,56 @@ def printMetrics(metrics):
         "Accuracy score:" + str(metrics.accuracy_score(metrics.y_test, metrics.y_pred))
     )
     print("MCC:" + str(metrics.matthews_corrcoef(metrics.y_test, metrics.y_pred)))
+
+
+def prepare_barplot(axis, x, y, title=None, x_label=None, y_label=None, y_lim=None):
+    axis.set_title(title)
+    axis.set_ylim(y_lim)
+    axis.set_ylabel(y_label)
+    axis.set_xlabel(x_label)
+    fig = axis.bar(x, y)
+    for x, rect in enumerate(fig):
+        height = rect.get_height()
+        axis.text(rect.get_x() + rect.get_width() / 2., 0.5 * height,
+                str(round(y[x] * 100, 2)) + '%',
+                ha='center', va='bottom', rotation=0)
+
+
+
+def plot_line_top3_subplot(dataFrame, title):
+    dataFrame = dataFrame.sort_values(by='accuracy', ascending=[False])
+    classifiers = dataFrame['classifier'].unique()
+    classifier0 = dataFrame.loc[csv_file['classifier'] == classifiers[0]].head(3)
+    classifier1 = dataFrame.loc[csv_file['classifier'] == classifiers[1]].head(3)
+    classifier2 = dataFrame.loc[csv_file['classifier'] == classifiers[2]].head(3)
+
+    fig, axis = plt.subplots(1, 3, figsize=(20, 5))
+    fig.suptitle(title)
+    prepare_barplot(axis[0], classifier0['setting_id'].tolist(),
+                    classifier0['accuracy'].tolist(),
+                    classifiers[0], "Settings", "Accuracy",
+                    [0, 1])
+
+    prepare_barplot(axis[1], classifier1['setting_id'].tolist(),
+                    classifier1['accuracy'].tolist(),
+                    classifiers[1], "Settings", "Accuracy",
+                    [0, 1])
+    prepare_barplot(axis[2], classifier2['setting_id'].tolist(),
+                    classifier2['accuracy'].tolist(),
+                    classifiers[2], "Settings", "Accuracy",
+                    [0, 1])
+    plt.show()
+
+
+''' ax1.set_ylim(0, 1)
+    plt.ylabel(y_axis_name, fontsize=15)
+    plt.xlabel(x_axis_name, fontsize=15)'''
+
+if __name__ == '__main__':
+    '''csv_file = pd.read_csv('../Data/jabref/prep_comparisons.csv')
+    csv_file = csv_file.sort_values(by='accuracy', ascending=[False])
+    svm_frame = csv_file.loc[csv_file['classifier'] == 'SVM'].head(3)
+    print(csv_file['classifier'].unique())'''
+    csv_file = pd.read_csv('../Data/jabref/prep_comparisons.csv')
+    csv_file = csv_file.sort_values(by='accuracy', ascending=[False])
+    plot_line_top3_subplot(csv_file, "Jabref")
