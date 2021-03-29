@@ -8,7 +8,19 @@ To start working in the environment, run following to install required packages:
 
 ---
 
-#### Current preprocess settings
+#### preprocess settings
+The preprocess settings are defined in the `config.yaml`, where each setting
+contains a list of lists. 
+The first item describes what to extract from the raw source 
+file, then the following strings is the parsing of the said extraction.  
+
+E.g. `[['lib', 'tow', 'jk', 'scw','lc', 'stem'],['pac', 'tow', 'jk']]`
+First list, extracts the imports, tokenizes the words, removes java keywords, 
+separate composite words, lower case, then stemmize the words.
+Second list, extracts packages, tokenizes them, remove java keywords.  
+
+All the settings are described down below.  
+
 ```
 settings = [
         ['extraction', 'parsing' ... ,'parsing],
@@ -24,7 +36,7 @@ settings = [
 * Import: 'lib'
 * Packages: 'pac'
 * Comments: 'com'
-* Clear commands: 'clear'
+* Clear chosen settings from list: 'clear'
 
 #### Parsing options
 * Lower case: 'lc'
@@ -33,10 +45,9 @@ settings = [
 * Remove java keywords: 'jk'
 * Remove java annotations: 'ja' NOT IMPLEMENTED
 * Remove java syntax ('jk','ja','sc'): 'js' NOT IMPLEMENTED
-* Remove english stopwords: 'es'
 * Remove numbers: 'nu'
 * Separate compound words: 'scw'
 * Stem words: 'stem'
-* Clear commands: 'clear'
+* Clear chosen settings from list: 'clear'
 
 ___
