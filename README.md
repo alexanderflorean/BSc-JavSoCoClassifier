@@ -43,8 +43,6 @@ settings = [
 * Remove single characters:  'sc'
 * Remove stop words: 'sw'
 * Remove java keywords: 'jk'
-* Remove java annotations: 'ja' NOT IMPLEMENTED
-* Remove java syntax ('jk','ja','sc'): 'js' NOT IMPLEMENTED
 * Remove numbers: 'nu'
 * Separate compound words: 'scw'
 * Stem words: 'stem'
