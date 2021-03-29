@@ -6,6 +6,11 @@ The environment use Python 3.8.5
 To start working in the environment, run following to install required packages:   
 `pip3 install -r requirements.txt`
 
+If unable to run the jupyter lab code, try removing the modin.pandas package and 
+use pandas instead.
+When doing this also remove the ray package and the following 2 lines
+`ray.shutdown()` and `ray.init()`.
+
 ---
 
 #### preprocess settings

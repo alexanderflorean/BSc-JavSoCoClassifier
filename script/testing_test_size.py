@@ -1,33 +1,34 @@
+import Evaluation as Eva
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.metrics import (
     accuracy_score,
     classification_report,
     confusion_matrix,
     matthews_corrcoef,
+    plot_confusion_matrix,
     precision_score,
-
 )
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.metrics import plot_confusion_matrix
-import Evaluation as Eva
-from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+
 
 def testing_test_size(dataFrame, test_size):
     fold_quantity = 10
     feature_representation = CountVectorizer()
     # Train and gather evaluation metrics
-    evaluate = Eva.Evaluation(dataFrame, feature_representation, test_size,fold_quantity)
+    evaluate = Eva.Evaluation(
+        dataFrame, feature_representation, test_size, fold_quantity
+    )
     classifier_max_ent, metrics_max_ent = evaluate.evaluate_MaxEnt()
     classifier_svm, metrics_svm = evaluate.evaluate_SVM()
     classifier_naive, metrics_naive = evaluate.evaluate_Naive_Bayes()
 
     fig, axis = plt.subplots(1, 3, figsize=(15, 5))
-    axis[0].set_title(metrics_max_ent.name + " Normalized Confusion-matrix", fontsize=15)
+    axis[0].set_title(
+        metrics_max_ent.name + " Normalized Confusion-matrix", fontsize=15
+    )
     axis[1].set_title(metrics_svm.name + " Normalized Confusion-matrix", fontsize=15)
     axis[2].set_title(metrics_naive.name + " Normalized Confusion-matrix", fontsize=15)
     fig1 = metrics_max_ent.visualize_normalized_confusion_matrix(axis[0])
@@ -53,6 +54,5 @@ def testing_test_size(dataFrame, test_size):
     metrics_svm.plot_predictionScoreAverage(classifier_svm)
 
 
-
-def testing_custom_size(dataFrame,num_of_file):
+def testing_custom_size(dataFrame, num_of_file):
     pass

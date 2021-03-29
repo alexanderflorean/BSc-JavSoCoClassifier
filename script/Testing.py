@@ -1,8 +1,6 @@
 import pandas as pd
-import RelativePaths as RP
 from Metrics import Metric
-from sklearn.feature_extraction.text import TfidfTransformer
-from sklearn.model_selection import StratifiedKFold, StratifiedShuffleSplit
+from sklearn.model_selection import StratifiedShuffleSplit
 
 
 def evaluate_classifier(
@@ -37,7 +35,6 @@ def evaluate_classifier_standard(
     skf = StratifiedShuffleSplit(
         n_splits=fold_quantity, test_size=test_size, random_state=42
     )
-    # skf = StratifiedKFold(n_splits=fold_quantity, shuffle=True, random_state=0)
     for index_train, index_test in skf.split(X, y):
         x_train_fold, x_test_fold = X[index_train], X[index_test]
         y_train_fold, y_test_fold = y[index_train], y[index_test]
@@ -64,13 +61,16 @@ def evaluate_classifier_standard(
     return listOfClassifier[positionOfMaxVal], classifierMetrics[positionOfMaxVal]
 
 
-# Pre: The number of files chosen should not exceed the number of actual existing files in the system,
-# this test is done to simulate real scenario where someone wants to take a portion of files (evenly)
-# and map to corresponding label
 def evaluate_classifier_custom(
     dataFrame, classifier, feature_representation, number_of_files_for_training
 ):
-    x_train, x_test, y_train, y_test = train_fold_quantity_Custom(
+    """
+    Pre: The number of files chosen should not exceed the number of actual existing files in the system,
+    this test is done to simulate real scenario where someone wants to take a portion of files (evenly)
+    and map to corresponding label
+    """
+
+    x_train, x_test, y_train, y_test = train_fold_quantity_custom(
         dataFrame, number_of_files_for_training
     )
 
@@ -85,7 +85,7 @@ def evaluate_classifier_custom(
     return model, metric
 
 
-def train_fold_quantity_Custom(dataFrame, number_of_files_for_training, random_state=0):
+def train_fold_quantity_custom(dataFrame, number_of_files_for_training, random_state=0):
     listOfLabels = dataFrame.Label.unique()
     listOfLabels.sort()
     TrainingFrame = pd.DataFrame(columns=dataFrame.columns)
@@ -106,16 +106,3 @@ def train_fold_quantity_Custom(dataFrame, number_of_files_for_training, random_s
     x_test = dataFrame["FileContent"]
     y_test = dataFrame["Label"]
     return x_train, x_test, y_train, y_test
-
-
-if __name__ == "__main__":
-    dataFrame = pd.read_csv(RP.get_processed_dataset())
-
-    dataFrame = dataFrame[dataFrame["Label"].isin(["GLOBALS"]) == False].reset_index(
-        drop=True
-    )
-    # evaluate_classifier2(dataFrame, None, None, 5)
-    # dataFrame = pd.read_csv(RP.getRawDataSet())
-    # Naive_Bayes_MultiNominal(dataFrame,True)
-    # SVM_linear(dataFrame,True)
-    # MaxEnt(dataFrame,True)

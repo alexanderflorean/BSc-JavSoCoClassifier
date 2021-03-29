@@ -7,7 +7,6 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.tokenize import RegexpTokenizer
 
-
 STOP_WORDS = set(stopwords.words("english"))
 JAVA_KEYWORDS = {
     "abstract",
@@ -97,7 +96,9 @@ class Preprocess:
     Uses 2 clases to extract, parse then save the parsed data into a csv file
     """
 
-    def __init__(self, settings, csv_raw_data_filepath: str, csv_processed_filepath: str):
+    def __init__(
+        self, settings, csv_raw_data_filepath: str, csv_processed_filepath: str
+    ):
 
         self.dataframe = pd.read_csv(csv_raw_data_filepath)
         self.csv_processed_filepath = csv_processed_filepath
@@ -368,7 +369,7 @@ class DataExtractor:
         self.extracted_data.extend(result)
         return result
 
-    # TODO: valid extraction?
+    # TODO: check if valid extraction?
     def extract_classes(self):
         result = []
         rule_class_declaration = r"(?<=class\s).*?(?=[\s]*{)"
@@ -389,7 +390,7 @@ class DataExtractor:
         self.extracted_data.extend(result)
         return result
 
-    # TODO: valid extraction?
+    # TODO: check if valid extraction?
     def extract_public_functions(self):
         result = []
         rule_1 = r"(?<=public\s.*)\w+(?=\()"
@@ -402,7 +403,7 @@ class DataExtractor:
         self.extracted_data.extend(result)
         return result
 
-    # TODO: valid extraction?
+    # TODO: check if valid extraction?
     def extract_public_variables(self):
         rule = r"(?<=public\s)(\w.*)(?=\s=)"
         # to add and create test
@@ -423,5 +424,10 @@ class DataExtractor:
 
 
 def preprocess_settings(settings, raw_data_file, save_file):
+    """
+    sets the given settings for the preprocess class, then run the
+    preprocessing.
+    Returns a dataframe containing the result of the preprocessing.
+    """
     df = Preprocess(settings, raw_data_file, save_file).preprocess_data()
     return df

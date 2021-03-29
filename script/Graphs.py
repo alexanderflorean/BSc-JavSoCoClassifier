@@ -1,46 +1,55 @@
 import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas as pd
 import numpy as np
+import pandas as pd
+import seaborn as sns
 
 NUM_OF_CLASSES_CAP = 6
 
 
 def plot_horizontal_graphs(metrics: dict, graph_type: str):
-    if graph_type == 'norm':
+    if graph_type == "norm":
         fig, axis = plt.subplots(1, 3, figsize=(20, 5))
-        axis[0].set_title(metrics['maxEnt'].name + " Normalized Confusion-matrix", fontsize=15)
-        axis[1].set_title(metrics['SVM'].name + " Normalized Confusion-matrix", fontsize=15)
-        axis[2].set_title(metrics['Naive'].name + " Normalized Confusion-matrix", fontsize=15)
-        fig1 = visualize_normalized_confusion_matrix(metrics['maxEnt'], axis[0])
-        fig2 = visualize_normalized_confusion_matrix(metrics['SVM'], axis[1])
-        fig3 = visualize_normalized_confusion_matrix(metrics['Naive'], axis[2])
+        axis[0].set_title(
+            metrics["maxEnt"].name + " Normalized Confusion-matrix", fontsize=15
+        )
+        axis[1].set_title(
+            metrics["SVM"].name + " Normalized Confusion-matrix", fontsize=15
+        )
+        axis[2].set_title(
+            metrics["Naive"].name + " Normalized Confusion-matrix", fontsize=15
+        )
+        fig1 = visualize_normalized_confusion_matrix(metrics["maxEnt"], axis[0])
+        fig2 = visualize_normalized_confusion_matrix(metrics["SVM"], axis[1])
+        fig3 = visualize_normalized_confusion_matrix(metrics["Naive"], axis[2])
         plt.tight_layout()
         plt.show()
-    elif graph_type == 'regular':
+    elif graph_type == "regular":
         fig, axis = plt.subplots(1, 3, figsize=(20, 5))
-        axis[0].set_title(metrics['maxEnt'].name + " Confusion-matrix", fontsize=15)
-        axis[1].set_title(metrics['SVM'].name + " Confusion-matrix", fontsize=15)
-        axis[2].set_title(metrics['Naive'].name + " Confusion-matrix", fontsize=15)
-        fig1 = visualize_confusion_matrix(metrics['maxEnt'], axis[0])
-        fig2 = visualize_confusion_matrix(metrics['SVM'], axis[1])
-        fig3 = visualize_confusion_matrix(metrics['Naive'], axis[2])
+        axis[0].set_title(metrics["maxEnt"].name + " Confusion-matrix", fontsize=15)
+        axis[1].set_title(metrics["SVM"].name + " Confusion-matrix", fontsize=15)
+        axis[2].set_title(metrics["Naive"].name + " Confusion-matrix", fontsize=15)
+        fig1 = visualize_confusion_matrix(metrics["maxEnt"], axis[0])
+        fig2 = visualize_confusion_matrix(metrics["SVM"], axis[1])
+        fig3 = visualize_confusion_matrix(metrics["Naive"], axis[2])
         plt.tight_layout()
         plt.show()
-    elif graph_type == 'report':
+    elif graph_type == "report":
         fig, axis = plt.subplots(1, 4, figsize=(24, 6))
-        axis[0].set_title(metrics['maxEnt'].name + " Classification report", fontsize=18)
-        axis[1].set_title(metrics['SVM'].name + " Classification report", fontsize=18)
-        axis[2].set_title(metrics['Naive'].name + " Classification report", fontsize=18)
+        axis[0].set_title(
+            metrics["maxEnt"].name + " Classification report", fontsize=18
+        )
+        axis[1].set_title(metrics["SVM"].name + " Classification report", fontsize=18)
+        axis[2].set_title(metrics["Naive"].name + " Classification report", fontsize=18)
         axis[3].set_title("Quantity of files for given concern", fontsize=18)
-        fig1 = plot_data_info(metrics['maxEnt'], axis[0])
-        fig2 = plot_data_info(metrics['SVM'], axis[1])
-        fig3 = plot_data_info(metrics['Naive'], axis[2])
-        plot_support_table(metrics['Naive'], axis[3])
+        fig1 = plot_data_info(metrics["maxEnt"], axis[0])
+        fig2 = plot_data_info(metrics["SVM"], axis[1])
+        fig3 = plot_data_info(metrics["Naive"], axis[2])
+        plot_support_table(metrics["Naive"], axis[3])
         plt.tight_layout()
         plt.show()
 
 
+# TODO: plot 3 line graphs horizonally, e.g. above, for top three settings
 def plot_line_graph(title: str, x_axis, y_axis: dict, x_axis_name, y_axis_name):
     fig = plt.figure(figsize=(8, 8))
     ax1 = fig.add_subplot(111)
@@ -49,16 +58,16 @@ def plot_line_graph(title: str, x_axis, y_axis: dict, x_axis_name, y_axis_name):
     plt.ylabel(y_axis_name, fontsize=15)
     plt.xlabel(x_axis_name, fontsize=15)
 
-    ax1.scatter(x_axis, y_axis['naive'], s=50, c='b', marker="x", label='Naive-Bayes')
-    ax1.plot(x_axis, y_axis['naive'], c='b')
+    ax1.scatter(x_axis, y_axis["naive"], s=50, c="b", marker="x", label="Naive-Bayes")
+    ax1.plot(x_axis, y_axis["naive"], c="b")
 
-    ax1.scatter(x_axis, y_axis['maxEnt'], s=50, c='r', marker="x", label='MaxEnt')
-    ax1.plot(x_axis, y_axis['maxEnt'], c='r')
+    ax1.scatter(x_axis, y_axis["maxEnt"], s=50, c="r", marker="x", label="MaxEnt")
+    ax1.plot(x_axis, y_axis["maxEnt"], c="r")
 
-    ax1.scatter(x_axis, y_axis['svm'], s=50, c='g', marker="x", label='SVM')
-    ax1.plot(x_axis, y_axis['svm'], c='g')
+    ax1.scatter(x_axis, y_axis["svm"], s=50, c="g", marker="x", label="SVM")
+    ax1.plot(x_axis, y_axis["svm"], c="g")
 
-    plt.legend(loc='upper left')
+    plt.legend(loc="upper left")
     plt.show()
 
 
@@ -131,19 +140,17 @@ def plot_predictionScoreAverage(metrics, classifier):
     numOfLabels = len(listofAverage)
     numOfFigures = numOfLabels
 
-    ##For many concerns, plots more evenly
+    # Quickfix for multiple labels
     if NUM_OF_CLASSES_CAP < numOfLabels:
         horizontal_space = 4
 
     figure = plt.figure(figsize=(15, 15))
-    figure.suptitle("Classifier: " + metrics.name, fontsize = 15)
+    figure.suptitle("Classifier: " + metrics.name, fontsize=15)
 
     gridspace = figure.add_gridspec(int(numOfFigures), hspace=horizontal_space)
     axes = gridspace.subplots()
     for index in range(int(numOfFigures)):
-        averageScore = [
-            item for sublist in listofAverage[index] for item in sublist
-        ]
+        averageScore = [item for sublist in listofAverage[index] for item in sublist]
         fig = axes[index].bar(listOflabels, averageScore, width=0.25, color="red")
         axes[index].set_ylim([0, 100])
         for bar in fig:
@@ -191,7 +198,7 @@ def visualize_confusion_matrix(metrics, axis=None):
         cmap="YlGnBu",
         fmt="d",
         ax=axis,
-        annot_kws={"size": 10}
+        annot_kws={"size": 10},
     )
     return fig
 
@@ -218,7 +225,17 @@ def printStar(metrics):
 
 
 def printMetrics(metrics):
-    print(metrics.confusion_matrix(metrics.y_test, metrics.y_pred, metrics.dataFrame.Label.unique()))
-    print(metrics.classification_report(metrics.y_test, metrics.y_pred, zero_division=False))
-    print("Accuracy score:" + str(metrics.accuracy_score(metrics.y_test, metrics.y_pred)))
+    print(
+        metrics.confusion_matrix(
+            metrics.y_test, metrics.y_pred, metrics.dataFrame.Label.unique()
+        )
+    )
+    print(
+        metrics.classification_report(
+            metrics.y_test, metrics.y_pred, zero_division=False
+        )
+    )
+    print(
+        "Accuracy score:" + str(metrics.accuracy_score(metrics.y_test, metrics.y_pred))
+    )
     print("MCC:" + str(metrics.matthews_corrcoef(metrics.y_test, metrics.y_pred)))
