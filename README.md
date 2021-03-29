@@ -14,9 +14,9 @@ contains a list of lists.
 The first item describes what to extract from the raw source 
 file, then the following strings is the parsing of the said extraction.  
 
-E.g. `[['lib', 'tow', 'jk', 'scw','lc', 'stem'],['pac', 'tow', 'jk']]`
+E.g. `[['lib', 'tow', 'jk', 'scw','lc', 'stem'],['pac', 'tow', 'jk']]`  
 First list, extracts the imports, tokenizes the words, removes java keywords, 
-separate composite words, lower case, then stemmize the words.
+separate composite words, lower case, then stemmize the words.  
 Second list, extracts packages, tokenizes them, remove java keywords.  
 
 All the settings are described down below.  
