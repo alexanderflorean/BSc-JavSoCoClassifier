@@ -1,100 +1,96 @@
-# BSc-project structure
+# BSc-project structure 
+
 #### Notes
 * think as being in the readers shoes
 
 # Introduction (~5p)
-  * Project goal 
-    * Research questions
-  * Project motivation
-  * Expected results
-  * Summary of results 
-  * Ethics
-  * Work split
-  * The dissertation layout
+* Project goal 
+  * Research questions
+* Project motivation
+* Expected results
+* Summary of results 
+* Ethics
+* Work split
+* The dissertation layout
 
 # Background (~10p)
-* The context of the research,  
 (relevant background info)
 * ML:
   * overview of ML
   * ML text classification
-* Pre-processing (belongs in methods?)
-  * Java syntax
-  * NLP techniques
-  * Regular expression
-* Feature representation (not go into specifics?)
-  * Bag-of-words (belongs in methods?)
-  * Tf-idf (belongs in methods?)
-* Classifiers
-  * Naive-Bayes
-  * MaxEntropy
-  * Support Vector Machine
-* Evaluation, (optional move to methods, depending on flow)
-  * K-fold validation
-  * Metrics, what they mean, and why use them.
-    * Precision
-    * Accuracy
-    * Recall
-    * Confusion Matrix
-    * Classification report
-* Programs that will be used for this lab, and motivation for them 
-  * jabref
-  * prom
-  * teammates
+* necessary steps for creating a classifier
+  * Collection of data
+  * preprocessing of data 
+    * input selection (parsing, NLP)  
+      * relevant information to extract
+    * feature representation
+  * Training Classifiers 
+    * Naive Bayes
+    * Support Vector Machines
+    * MaxEnt
+  * Evaluation  
+    * Metrics, explain the metrics
+      * Precision
+      * Accuracy
+      * Recall
+      * Confusion Matrix
+      * Classification report
+  * Testing
 
 * Chapter summary
  
 # Design (~15p)
 * Tools used, and motivation behind the choices
+* Programs that will be used for this lab, and motivation for them 
+  * jabref
+  * prom
+  * teammates
 * approach, on how we designed our workflow  
   * jupyter
     * motivation
   * scripts
-* Collection of data 
-  * Method & structure of collecting the data
-  * Systems
-    * Jabref
-    * TEAMMATE
-    * ProM
-* Data extractions (preprocessing)
-  * Extracting information
-  * Parsing
-    * NLP
-    * Regular expression
-* Feature representation
-  * CountVector
-  * TfidVector
-* Training models
-  * parameters
-    * Stratified k-fold
-    * Absolute test sample
-  * Classifiers
-    * Naive-Bayes
-    * MaxEnt
-    * SVM
-* Model evaluation
-* Model testing
+  * folders/structures
+* The steps
+  * Collection of data 
+    * Method & structure of collecting the data
+    * reasoning
+  * Pre-processing
+    * Extracting information
+    * Parsing
+      * NLP
+      * Regular expression
+    * Feature representation
+      * CountVector
+      * TfidVector
+  * Training models
+    * parameters
+      * Stratified k-fold
+      * Absolute size test sample
+    * Classifiers
+      * Naive-Bayes
+      * MaxEnt
+      * SVM
+  * Model evaluation
+  * Model testing
 * Chapter summary
 
 # Implementation (~15p)
+(show implementation)
 * Collection of data 
   * Method & structure of collecting the data
-  * Systems
-    * Jabref
-    * TEAMMATE
-    * ProM
-* Data extractions (preprocessing)
-  * Extracting information
-  * Parsing 
+  * reasoning
+* Pre-processing
+  * Extracting information (GatherData.py)
+  * Parsing (Preprocess.py)
     * NLP
     * Regular expression
-* Feature representation
-  * CountVector
-  * TfidVector
+    * Feature representation
+      * CountVector
+      * Tf-idf
 * Training models
   * parameters
     * Stratified k-fold
-    * Absolute test sample
+    * Absolute size test sample
   * Classifiers
     * Naive-Bayes
     * MaxEnt
@@ -108,7 +104,23 @@
 # Results/Evaluation (~10p)
 * Summarise main results
 * Give details of the results
-  * Best representation?
+  * Pre-processing 
+    * feature representation
+    * systems 
+      * jabref
+      * teammates
+      * prom
+  * Train size, percentage
+    * systems 
+      * jabref
+      * teammates
+      * prom
+  * Train size, number of files
+    * systems 
+      * jabref
+      * teammates
+      * prom
+  * Classifier, summarise classifier results
 * Implementation evaluation (expected vs actual results)
 * Chapter summary
 
@@ -120,5 +132,6 @@
 * Future work
 * Concluding remarks
 
+----
 * References
 * Appendices
