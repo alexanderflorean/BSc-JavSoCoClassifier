@@ -1,8 +1,5 @@
 # BSc-project structure 
 
-#### Notes
-* think as being in the readers shoes
-
 # Introduction (~5p)
 * Project goal 
   * Research questions
@@ -18,24 +15,23 @@
 * ML:
   * overview of ML
   * ML text classification
-* necessary steps for creating a classifier
-  * Collection of data
-  * preprocessing of data 
-    * input selection (parsing, NLP)  
-      * relevant information to extract
-    * feature representation
-  * Training Classifiers 
-    * Naive Bayes
-    * Support Vector Machines
-    * MaxEnt
-  * Evaluation  
-    * Metrics, explain the metrics
-      * Precision
-      * Accuracy
-      * Recall
-      * Confusion Matrix
-      * Classification report
-  * Testing
+    * necessary steps for creating a classifier
+      * Collection of data
+      * preprocessing of data 
+        * input selection (parsing, NLP)  
+        * feature representation
+      * Training Classifiers 
+        * Naive Bayes
+        * Support Vector Machines
+        * MaxEnt
+      * Evaluation  
+      * Metrics, explain the metrics
+        * Precision
+        * Accuracy
+        * Recall
+        * Confusion Matrix
+        * Classification report
+      * Testing, how does it test the models?
 
 * Chapter summary
  
@@ -55,7 +51,7 @@
     * Method & structure of collecting the data
     * reasoning
   * Pre-processing
-    * Extracting information
+    * Extracting information, what is relevant to extract?
     * Parsing
       * NLP
       * Regular expression
