@@ -44,37 +44,24 @@
           * Classification report
 * Optional: Chapter summary
  
-# Study Design (~15p)
-fill without referring to specific libraries.
+# Experiment design (~15p)
 The design of how we are gonna find the answers to the research questions.
 (should explain how we collected data, and pre-process)
-* Tools used, and motivation behind the choices
+
+* Go into detail of the research questions
+* Tools used, and motivation behind the choices:
+  * jupyter, scikit-learn, et.c.
 * Programs that will be used for this lab, and motivation for them 
-  * jabref
-  * prom
-  * teammates
-* The steps
-  * Collection of data 
-    * Method & structure of collecting the data
-    * reasoning
-  * Pre-processing
-    * Extracting information, what is relevant to extract?
-    * Parsing
-      * NLP?
-      * Regular expression?
-    * Feature representation?
-      * CountVector?
-      * TfidVector?
-  * Training models
-    * parameters
-      * Stratified k-fold
-      * Absolute size test sample
-    * Classifiers
-      * Naive-Bayes
-      * MaxEnt
-      * SVM
-  * Model evaluation
-  * Model testing
+  * jabref, prom, teammates
+* Pre-processing:
+  * How we will evaluate the different inputs, and find the better inputs
+* Feature representation?, motivate the choice between
+      * CountVector or TfidVector?
+* Train size evaluation:
+  * how we will test which is the optimal train size for the model
+* Classifiers:
+  * Motivation behind choice of classifiers
+  * how we will find the better classifier
 * Chapter summary
 
 # Implementation (~15p)
