@@ -7,6 +7,8 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.tokenize import RegexpTokenizer
 
+nltk.download('stopwords')
+
 STOP_WORDS = set(stopwords.words("english"))
 JAVA_KEYWORDS = {
     "abstract",

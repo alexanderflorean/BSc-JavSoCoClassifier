@@ -48,24 +48,25 @@
 The design of how we are gonna find the answers to the research questions.
 (should explain how we collected data, and pre-process)
 
-* Go into detail of the research questions
-* Tools used, and motivation behind the choices:
-  * jupyter, scikit-learn, et.c.
+* Go into detail of the research questions 
 * Programs that will be used for this lab, and motivation for them 
   * jabref, prom, teammates
 * Pre-processing:
   * How we will evaluate the different inputs, and find the better inputs
 * Feature representation?, motivate the choice between
       * CountVector or TfidVector?
-* Train size evaluation:
-  * how we will test which is the optimal train size for the model
 * Classifiers:
   * Motivation behind choice of classifiers
   * how we will find the better classifier
+* Train size evaluation:
+  * how we will test which is the optimal train size for the model
+  * how the different classifiers perform in the 
 * Chapter summary
 
 # Implementation (~15p)
 (show implementation)
+* Tools used, and motivation behind the choices:
+  * jupyter, scikit-learn, et.c.
 * Collection of data 
   * Method & structure of collecting the data
   * reasoning
