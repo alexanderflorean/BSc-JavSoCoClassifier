@@ -3,6 +3,8 @@
 * __Research questions (RQ)(subsection):__
   1. Is it possible to map architectural concerns through machine learning?  
       * Answ: This will be answered by implementing the model
+
+
   __Sub-research questions:__
   2. How does different input data affect the results?
       * Answ: Will experiment with different input by:
@@ -14,15 +16,21 @@
         * Will also check which feature representations works the best:
           * This is done by comparing the Tf-idf against Bag of words 
             against each other.
+            
+            
   3. How does different train size affect the results?
       * Answ: We will look at how the metics changes in two cases:
         * Keep all parameters static except percentage/quantity size
           * When we vary the percentage size of the training data
           * When we vary the quantity of training files for the dataset
+
+
   4. Which of the chosen classifiers is the best one for the task?
       * what hyperparameters, limitations (not changing hyperparameters throughout the experiment) 
       * Choose the best result from RQ 2, and everything else static
       * Comparision between metrics, F1 score, accuracy, prediction probabilites. 
+
+
 * Subject systems (subsection):
     * Were provided with 3 open-sourced systems that already had their 
       software architectural concerns mapped.
