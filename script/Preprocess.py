@@ -263,12 +263,14 @@ class Parser:
     # TODO:Removes all syntax in java, including special characters from the
     # parsed_data list, the list needs to be tokenized
     def remove_java_syntax_from_parsed_data(self):
-        pass
+        self.remove_java_annotations_from_parsed_data()
+        self.remove_java_keywords_from_parsed_data()
 
     def remove_java_annotations_from_parsed_data(self):
-        pass
+        result = list(filter(lambda n: n not in JAVA_ANNOTATIONS, self.parsed_data))
+        self.parsed_data = result
 
-    # TODO: following functions needs parsed data to be tokenized
+    # Pre: needs the parsed data to be tokenized
     def remove_java_keywords_from_parsed_data(self):
         result = list(filter(lambda n: n not in JAVA_KEYWORDS, self.parsed_data))
         self.parsed_data = result
