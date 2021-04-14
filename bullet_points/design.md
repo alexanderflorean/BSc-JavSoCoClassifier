@@ -5,7 +5,7 @@
       * Answ: This will be answered by implementing the model
 
 
-  __Sub-research questions:__
+  __Sub-research questions:__  
   2. How does different input data affect the results?
       * Answ: Will experiment with different input by:
         * Keep train size and other parameters static, change only pre-processing settings 
