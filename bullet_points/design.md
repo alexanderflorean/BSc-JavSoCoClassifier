@@ -1,31 +1,45 @@
 # Design 
+* Chapter overview
 
-* __Research questions (RQ)(subsection):__
+* __Research questions (RQ)(section):__
+(Will define RQ in introduction of background)
+  * short text on how they are relevant to the work.
+  * How they are used to guide the work
+  * RQ's 
+    1. Is it possible to map architectural concerns through machine learning?  
+    2. Which input is most suitable for creating a classifier?
+    3. How large dataset is needed to create a satisfactory classifier?
+    4. Which of the chosen classifiers is the best one for the task?
+    
+* RQ:1 (subsection)
   1. Is it possible to map architectural concerns through machine learning?  
       * Answ: This will be answered by implementing the model
 
-  2. How does different input data affect the results?
+* RQ:2 (subsection)
+  2. Which input is most suitable for creating a classifier?
       * Answ: Will experiment with different input by:
         * Keep train size and other parameters static, change only pre-processing settings 
         * compare the different metrics to extract conclusions.  
           * Metrics: accuracy, precision, recall, f1-score, prediction probability
         * To find the best input, take the methods from above and, 
           * compare the inputs against each other.
-        * Will also check which feature representations works the best:
+        * Will also look at feature representation:
           * This is done by comparing the Tf-idf against Bag of words 
             against each other.
             
-            
-  3. How does different train size affect the results?
-      * Answ: We will look at how the metics changes in two cases:
-        * Keep all parameters static except percentage/quantity size
-          * When we vary the percentage size of the training data
-          * When we vary the quantity of training files for the dataset
+* RQ 3 (subsection)
+  3. How large dataset is needed to create a satisfactory classifier?
+    * Answ: We will look at how the metics changes in two cases:
+      * Keep all parameters static except percentage/quantity size
+        * When we vary the percentage size of the training data 
+          * Motivate, why is it relevant to look at the percentage?
+        * When we vary the quantity of training files for the dataset
+          * Motivate, why is it relevant to look at the number of files?
 
-
+* RQ 4 (subsection)
   4. Which of the chosen classifiers is the best one for the task?
       * what hyperparameters, limitations (not changing hyperparameters throughout the experiment) 
-      * Choose the best result from RQ 2, and everything else static
+      * Overall look at previous tests
       * Comparision between metrics, F1 score, accuracy, prediction probabilites. 
 
 
@@ -48,4 +62,8 @@
       * lines of code
       * quantity of files
       * quantity of concerns
+    * (Get reference for this) How large is a large, medium or small system? 
+    * Note that the systems are relatively similar in size except for TeamMates  
+      which is smaller in the sense of lines of code
+      
 
