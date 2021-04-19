@@ -6,38 +6,38 @@
   * short text on how they are relevant to the work.
   * How they are used to guide the work
   * RQ's 
-    1. Is it possible to map architectural concerns through machine learning?  
-    2. Which input is most suitable for creating a classifier?
-    3. How large dataset is needed to create a satisfactory classifier?
-    4. Which of the chosen classifiers is the best one for the task?
+    * RQ 1. Is it possible to map architectural concerns through machine learning?  
+    * RQ 2. Which input is most suitable for creating a classifier?
+    * RQ 3. How large dataset is needed to create a satisfactory classifier?
+    * RQ 4. Which of the chosen classifiers is the best one for the task?
     
 * RQ:1 (subsection)
-  1. Is it possible to map architectural concerns through machine learning?  
+  * (1) Is it possible to map architectural concerns through machine learning?  
       * Answ: This will be answered by implementing the model
 
-* RQ:2 (subsection)
-  2. Which input is most suitable for creating a classifier?
-      * Answ: Will experiment with different input by:
-        * Keep train size and other parameters static, change only pre-processing settings 
-        * compare the different metrics to extract conclusions.  
-          * Metrics: accuracy, precision, recall, f1-score, prediction probability
-        * To find the best input, take the methods from above and, 
-          * compare the inputs against each other.
-        * Will also look at feature representation:
-          * This is done by comparing the Tf-idf against Bag of words 
-            against each other.
+* RQ:2 (subsection)  
+  * (2) Which input is most suitable for creating a classifier?  
+    * Answ: Will experiment with different input by:  
+        * Keep train size and other parameters static, change only pre-processing settings  
+        * compare the different metrics to extract conclusions.   
+          * Metrics: accuracy, precision, recall, f1-score, prediction probability   
+        * To find the best input, take the methods from above and,   
+          * compare the inputs against each other.  
+        * Will also look at feature representation:  
+          * This is done by comparing the Tf-idf against Bag of words   
+            against each other.  
             
 * RQ 3 (subsection)
-  3. How large dataset is needed to create a satisfactory classifier?
-    * Answ: We will look at how the metics changes in two cases:
-      * Keep all parameters static except percentage/quantity size
-        * When we vary the percentage size of the training data 
-          * Motivate, why is it relevant to look at the percentage?
-        * When we vary the quantity of training files for the dataset
-          * Motivate, why is it relevant to look at the number of files?
+  * (3) How large dataset is needed to create a satisfactory classifier?
+    * Answ: We will look at how the metics changes in two cases  
+      * Keep all parameters static except percentage/quantity size   
+        * When we vary the percentage size of the training data   
+          * Motivate, why is it relevant to look at the percentage?  
+        * When we vary the quantity of training files for the dataset  
+          * Motivate, why is it relevant to look at the number of files?  
 
 * RQ 4 (subsection)
-  4. Which of the chosen classifiers is the best one for the task?
+  * (4) Which of the chosen classifiers is the best one for the task?
       * what hyperparameters, limitations (not changing hyperparameters throughout the experiment) 
       * Overall look at previous tests
       * Comparision between metrics, F1 score, accuracy, prediction probabilites. 
