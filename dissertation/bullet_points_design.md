@@ -6,7 +6,7 @@
   * short text on how they are relevant to the work.
   * How they are used to guide the work
   * RQ's 
-    * RQ 1. Is it possible to map architectural concerns through machine learning?  
+    * RQ 1. How well can we map software architectural concerns through machine learning?  
     * RQ 2. Which input is most suitable for creating a classifier?
     * RQ 3. How large dataset is needed to create a satisfactory classifier?
     * RQ 4. Which of the chosen classifiers is the best one for the task?
@@ -43,7 +43,7 @@
       * Comparision between metrics, F1 score, accuracy, prediction probabilites. 
 
 
-* Subject systems (subsection):
+* Subject systems & Classifiers (subsection):
     * Were provided with 3 open-sourced systems that already had their 
       software architectural concerns mapped.
       * Then we just need to find a way to import this information to our system
@@ -66,4 +66,8 @@
     * Note that the systems are relatively similar in size except for TeamMates  
       which is smaller in the sense of lines of code
       
+  * Classifiers 
+    * Motivation
 
+* Data collection
+* Training & Evaluation
