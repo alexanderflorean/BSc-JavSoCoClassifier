@@ -22,7 +22,7 @@ class Evaluation:
         self.test_size = test_size
 
     def evaluate_Naive_Bayes(self, type="standard"):
-        best_classifier, classifier_metrics = Testing.evaluate_classifier(
+        average_classifier, classifier_metrics = Testing.evaluate_classifier(
             self.dataFrame,
             classifier=Classifier(Algorithm.NAIVE_BAYES, "Naive-Bayes"),
             feature_representation=self.f_vector,
@@ -31,10 +31,10 @@ class Evaluation:
             type=type,
             number_of_files_for_training=self.number_of_files_to_test,
         )
-        return best_classifier, classifier_metrics
+        return average_classifier, classifier_metrics
 
     def evaluate_MaxEnt(self, type="standard"):
-        best_classifier, classifier_metrics = Testing.evaluate_classifier(
+        average_classifier, classifier_metrics = Testing.evaluate_classifier(
             self.dataFrame,
             classifier=Classifier(Algorithm.MAX_ENT, "MaxEnt"),
             feature_representation=self.f_vector,
@@ -43,10 +43,10 @@ class Evaluation:
             type=type,
             number_of_files_for_training=self.number_of_files_to_test,
         )
-        return best_classifier, classifier_metrics
+        return average_classifier, classifier_metrics
 
     def evaluate_SVM(self, type="standard"):
-        best_classifier, classifier_metrics = Testing.evaluate_classifier(
+        average_classifier, classifier_metrics = Testing.evaluate_classifier(
             self.dataFrame,
             classifier=Classifier(Algorithm.SVM, "SVM"),
             feature_representation=self.f_vector,
@@ -55,4 +55,4 @@ class Evaluation:
             type=type,
             number_of_files_for_training=self.number_of_files_to_test,
         )
-        return best_classifier, classifier_metrics
+        return average_classifier, classifier_metrics
