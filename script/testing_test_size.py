@@ -52,16 +52,16 @@ def testing_percentage(dataFrame, start, increment, finish, feature_vector):
     ##############################################
 
     ##############PRECISION#######################
-    Graphs.plot_line_graph("Weighted avg. precision over train size", x_axis, {'naive': naive_precision_test,
+    Graphs.plot_line_graph("Macro avg. precision over train size", x_axis, {'naive': naive_precision_test,
                                                                                'maxEnt': maxEnt_precision_test,
                                                                                'svm': svm_precision_test
                                                                                }, "Train size (%)",
-                           "W.avg. precision", )
+                           "Macro.avg. precision", )
     ##############RECALL#########################
-    Graphs.plot_line_graph("Weighted avg. recall over train size", x_axis, {'naive': naive_recall_test,
+    Graphs.plot_line_graph("Macro avg. recall over train size", x_axis, {'naive': naive_recall_test,
                                                                             'maxEnt': maxEnt_recall_test,
                                                                             'svm': svm_recall_test
-                                                                            }, "Train size (%)", "W.avg. recall", )
+                                                                            }, "Train size (%)", "Macro.avg. recall", )
 
 
 def testing_abs_size(dataFrame, start, increment, finish, feature_vector):
@@ -111,16 +111,16 @@ def testing_abs_size(dataFrame, start, increment, finish, feature_vector):
     ##############################################
 
     ##############PRECISION#######################
-    Graphs.plot_line_graph("Weighted avg. precision over train size", x_axis, {'naive': naive_precision_test,
+    Graphs.plot_line_graph("Macro avg. precision over train size", x_axis, {'naive': naive_precision_test,
                                                                                'maxEnt': maxEnt_precision_test,
                                                                                'svm': svm_precision_test
                                                                                }, "Train size (files)",
-                           "W.avg. precision", )
+                           "Macro.avg. precision", )
     ##############RECALL#########################
-    Graphs.plot_line_graph("Weighted avg. recall over train size", x_axis, {'naive': naive_recall_test,
+    Graphs.plot_line_graph("Macro avg. recall over train size", x_axis, {'naive': naive_recall_test,
                                                                             'maxEnt': maxEnt_recall_test,
                                                                             'svm': svm_recall_test
-                                                                            }, "Train size (files)", "W.avg. recall", )
+                                                                            }, "Train size (files)", "Macro.avg. recall", )
 
 
 def testing_test_size(dataFrame, test_size_start, test_size_increment, test_size_stop, feature_vector, abs_size=False):
