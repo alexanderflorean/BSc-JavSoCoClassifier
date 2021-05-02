@@ -54,6 +54,7 @@ settings = [
 * Remove numbers: 'nu'
 * Separate compound words: 'scw'
 * Stem words: 'stem'
+* Tokenize words: 'tow'
 * Clear chosen settings from list: 'clear'
 
 ___
