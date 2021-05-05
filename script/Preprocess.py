@@ -78,19 +78,6 @@ JAVA_KEYWORDS = {
     "var",
     "yield",
 }
-JAVA_ANNOTATIONS = {
-    "@Override",
-    "@Deprecated",
-    "@SuppressWarnings",
-    "@Retention",
-    "@Documented",
-    "@Target",
-    "@Inherited",
-    "@SafeVarags",
-    "@FunctionalInterface",
-    "@Repeatable",
-}
-ACCESS_MODIFIERS = {"public", "private", "protected"}
 
 
 class Preprocess:
@@ -175,14 +162,6 @@ class Preprocess:
                 self.parsing_list.append(
                     partial(self.parser.remove_java_keywords_from_parsed_data)
                 )
-            elif choice == "ja":
-                self.parsing_list.append(
-                    partial(self.parser.remove_java_annotations_from_parsed_data)
-                )
-            elif choice == "js":
-                self.parsing_list.append(
-                    partial(self.parser.remove_java_syntax_from_parsed_data)
-                )
             elif choice == "sw":
                 self.parsing_list.append(
                     partial(self.parser.remove_stopwords_from_parsed_data)
@@ -221,10 +200,6 @@ class Preprocess:
             self.extraction_list.append(
                 partial(self.extractor.extract_public_variables)
             )
-        elif choice == "am":
-            self.extraction_list.append(partial(self.extractor.extract_all_functions))
-        elif choice == "av":
-            self.extraction_list.append(partial(self.extractor.extract_all_variables))
         elif choice == "com":
             self.extraction_list.append(partial(self.extractor.extract_comments))
         elif choice == "lib":
@@ -259,16 +234,6 @@ class Parser:
     """
     Following functions manipulate the parsed_data list
     """
-
-    # TODO:Removes all syntax in java, including special characters from the
-    # parsed_data list, the list needs to be tokenized
-    def remove_java_syntax_from_parsed_data(self):
-        self.remove_java_annotations_from_parsed_data()
-        self.remove_java_keywords_from_parsed_data()
-
-    def remove_java_annotations_from_parsed_data(self):
-        result = list(filter(lambda n: n not in JAVA_ANNOTATIONS, self.parsed_data))
-        self.parsed_data = result
 
     # Pre: needs the parsed data to be tokenized
     def remove_java_keywords_from_parsed_data(self):
@@ -373,7 +338,6 @@ class DataExtractor:
         self.extracted_data.extend(result)
         return result
 
-    # TODO: check if valid extraction?
     def extract_classes(self):
         result = []
         rule_class_declaration = r"(?<=class\s).*?(?=[\s]*{)"
@@ -394,7 +358,6 @@ class DataExtractor:
         self.extracted_data.extend(result)
         return result
 
-    # TODO: check if valid extraction?
     def extract_public_functions(self):
         result = []
         rule_1 = r"(?<=public\s.*)\w+(?=\()"
@@ -407,7 +370,6 @@ class DataExtractor:
         self.extracted_data.extend(result)
         return result
 
-    # TODO: check if valid extraction?
     def extract_public_variables(self):
         rule = r"(?<=public\s)(\w.*)(?=\s=)"
         # to add and create test
