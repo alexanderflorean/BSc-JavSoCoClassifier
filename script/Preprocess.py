@@ -194,7 +194,7 @@ class Preprocess:
             self.extraction_list.append(partial(self.extractor.extract_classes))
         elif choice == "pm":
             self.extraction_list.append(
-                partial(self.extractor.extract_public_functions)
+                partial(self.extractor.extract_public_methods)
             )
         elif choice == "pv":
             self.extraction_list.append(
@@ -343,8 +343,7 @@ class DataExtractor:
         rule_class_declaration = r"(?<=class\s).*?(?=[\s]*{)"
         rule_class_objects = r"(?<=public\s)\w+(?=.*\()"
         rule_new_object_calls = r"(?<=new\s)\w+(?=\()"
-        rule_private_class_objects = r"(?<=private\s).*(?=\s\w+;|\s\w+\s=)"
-        # private declarations e.g. privat final static Panel panel
+        rule_private_class_name = r"(?<=private\s).*(?=\s\w+;|\s\w+\s=)"
 
         tmp = regex.findall(rule_class_declaration, self.raw_data)
         result.extend(tmp)
@@ -352,37 +351,36 @@ class DataExtractor:
         result.extend(tmp)
         tmp = regex.findall(rule_new_object_calls, self.raw_data)
         result.extend(tmp)
-        tmp = regex.findall(rule_private_class_objects, self.raw_data)
+        tmp = regex.findall(rule_private_class_name, self.raw_data)
         result.extend(tmp)
 
         self.extracted_data.extend(result)
         return result
 
-    def extract_public_functions(self):
+    def extract_public_methods(self):
         result = []
-        rule_1 = r"(?<=public\s.*)\w+(?=\()"
-        rule_2 = r"(?<=\.).*?(?=\()"
+        rule_pub_id = r"(?<=public\s.*)\w+(?=\()"
+        rule_func_call = r"(?<=\.).*?(?=\()"
 
-        tmp = regex.findall(rule_1, self.raw_data)
+        tmp = regex.findall(rule_pub_id, self.raw_data)
         result.extend(tmp)
-        tmp = regex.findall(rule_2, self.raw_data)
+        tmp = regex.findall(rule_func_call, self.raw_data)
         result.extend(tmp)
         self.extracted_data.extend(result)
         return result
 
     def extract_public_variables(self):
-        rule = r"(?<=public\s)(\w.*)(?=\s=)"
-        # to add and create test
-        result = regex.findall(rule, self.raw_data)
+        rule_pub_var = r"(?<=public\s)(\w.*)(?=\s=)"
+        result = regex.findall(rule_pub_var, self.raw_data)
         self.extracted_data.extend(result)
 
     def extract_comments(self):
         result = []
-        regex_line_comments = r"((?<=\/\/\s*).*)"
-        regex_row_comments = r"((?<=\/\*)[\s\S]+?(?=\*\/))"
-        tmp = regex.findall(regex_line_comments, self.raw_data)
+        rule_single_line_comments = r"((?<=\/\/\s*).*)"
+        rule_multi_line_comments = r"((?<=\/\*)[\s\S]+?(?=\*\/))"
+        tmp = regex.findall(rule_single_line_comments, self.raw_data)
         result.extend(tmp)
-        tmp = regex.findall(regex_row_comments, self.raw_data)
+        tmp = regex.findall(rule_multi_line_comments, self.raw_data)
         result.extend(tmp)
 
         self.extracted_data.extend(result)

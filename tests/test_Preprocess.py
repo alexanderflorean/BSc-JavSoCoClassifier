@@ -72,7 +72,7 @@ def test_DataExtractor_extract_classes():
     assert result == expected_result
 
 
-def test_DataExtractor_extract_public_functions():
+def test_DataExtractor_extract_public_methods():
     test_input = get_test_input()
     expected_result = []
     rule_1 = r'(?<=public\s.*)\w+(?=\()'
@@ -85,7 +85,7 @@ def test_DataExtractor_extract_public_functions():
 
     de = DataExtractor()
     de.set_raw_data(test_input)
-    result = de.extract_public_functions()
+    result = de.extract_public_methods()
     assert result == expected_result
 
 
