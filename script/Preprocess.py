@@ -370,9 +370,12 @@ class DataExtractor:
         return result
 
     def extract_public_variables(self):
-        rule_pub_var = r"(?<=public\s)(\w.*)(?=\s=)"
-        result = regex.findall(rule_pub_var, self.raw_data)
-        self.extracted_data.extend(result)
+        rule_pub_var_1 = r"(?<=public\s)(\w.*)(?==)"
+        rule_pub_var_2 = r"(?<=public\s)(\w*)(?=;)"
+        result_1 = regex.findall(rule_pub_var_1, self.raw_data)
+        result_2 = regex.findall(rule_pub_var_2, self.raw_data)
+        self.extracted_data.extend(result_1)
+        self.extracted_data.extend(result_2)
 
     def extract_comments(self):
         result = []

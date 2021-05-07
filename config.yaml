@@ -29,55 +29,52 @@ preprocess settings list:
             ['lib', 'tow', 'jk', 'scw','lc', 'stem'],
             ['pac', 'tow', 'jk']
         ]
-    s1:
+    s1: 
+        [ 
+            ['lib', 'tow', 'scw', 'jk', 'lc', 'stem'],
+            ['pac', 'tow', 'jk',],
+            ['c', 'tow', 'jk', 'scw','lc'],
+        ]
+    s2:
         [
             ['lib', 'tow', 'jk', 'scw','lc', 'stem'],
             ['pac',  'tow', 'jk'],
             ['com', 'tow', 'lc', 'sw', 'stem']
         ]
-    s2: 
+    s3: 
         [
             ['lib', 'tow', 'scw', 'jk', 'lc', 'stem'],
             ['pac', 'tow', 'jk'],
             ['pm', 'tow', 'scw', 'jk', 'lc', 'sw']
         ]
 
-    s3: 
+    s4: 
         [
             ['lib', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
             ['pac', 'tow', 'jk'],
             ['pv', 'tow', 'jk', 'scw','lc' ],
-        ]
-    s4: 
-        [ 
-            ['lib', 'tow', 'scw', 'jk', 'lc', 'stem'],
-            ['pac', 'tow', 'jk',],
-            ['c', 'tow', 'jk', 'scw','lc'],
         ]
     s5: 
         [
             ['lib', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
             ['pac', 'tow', 'jk'],
             ['pm', 'tow', 'jk', 'scw','lc', 'sw'],
-            ['pv', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
-            ['com', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
-            ['c', 'tow', 'jk', 'scw','lc', 'sw', 'stem']
+            ['pv', 'tow', 'jk', 'scw','lc' ]
         ]
     s6: 
         [
             ['lib', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
             ['pac', 'tow', 'jk'],
+            ['c', 'tow', 'jk', 'scw','lc'],
             ['pm', 'tow', 'jk', 'scw','lc', 'sw'],
-            ['pv', 'tow', 'jk', 'scw','lc', 'sw'],
-            ['com', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
-            ['c', 'tow', 'jk', 'scw','lc', 'sw']
+            ['pv', 'tow', 'jk', 'scw','lc' ]
         ]
     s7: 
         [
             ['lib', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
             ['pac', 'tow', 'jk'],
-            ['pm', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
-            ['pv', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
-            ['com', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
-            ['c', 'tow', 'jk', 'scw','lc', 'sw', 'stem']
+            ['c', 'tow', 'jk', 'scw','lc'],
+            ['com', 'tow', 'lc', 'sw', 'stem'],
+            ['pm', 'tow', 'jk', 'scw','lc', 'sw'],
+            ['pv', 'tow', 'jk', 'scw','lc' ]
         ]
