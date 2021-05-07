@@ -33,31 +33,26 @@ preprocess settings list:
         [
             ['lib', 'tow', 'jk', 'scw','lc', 'stem'],
             ['pac',  'tow', 'jk'],
-            ['com', 'tow', 'jk', 'scw', 'lc', 'sw']
+            ['com', 'tow', 'lc', 'sw', 'stem']
         ]
     s2: 
         [
-            ['lib', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
-            ['pac', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
-            ['pm', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
-            ['pv', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
-            ['com', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
-            ['c', 'tow', 'jk', 'scw','lc', 'sw', 'stem']
+            ['lib', 'tow', 'scw', 'jk', 'lc', 'stem'],
+            ['pac', 'tow', 'jk'],
+            ['pm', 'tow', 'scw', 'jk', 'lc', 'sw']
         ]
 
     s3: 
         [
+            ['lib', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
             ['pac', 'tow', 'jk'],
-            ['lib', 'tow', 'scw', 'jk', 'lc', 'stem'],
-            ['pm', 'tow', 'scw', 'jk', 'lc', 'sw']
+            ['pv', 'tow', 'jk', 'scw','lc' ],
         ]
     s4: 
         [ 
             ['lib', 'tow', 'scw', 'jk', 'lc', 'stem'],
             ['pac', 'tow', 'jk',],
-            ['c', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
-            ['pm', 'tow', 'scw', 'jk', 'lc', 'sw', 'stem'],
-            ['pv', 'tow', 'jk', 'scw','lc', 'sw', 'stem']
+            ['c', 'tow', 'jk', 'scw','lc'],
         ]
     s5: 
         [
@@ -81,8 +76,8 @@ preprocess settings list:
         [
             ['lib', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
             ['pac', 'tow', 'jk'],
-            ['pm', 'tow', 'jk', 'scw','lc' ],
-            ['pv', 'tow', 'jk', 'scw','lc' ],
+            ['pm', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
+            ['pv', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
             ['com', 'tow', 'jk', 'scw','lc', 'sw', 'stem'],
-            ['c', 'tow', 'jk', 'scw','lc']
+            ['c', 'tow', 'jk', 'scw','lc', 'sw', 'stem']
         ]
