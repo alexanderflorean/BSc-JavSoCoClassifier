@@ -1,31 +1,409 @@
-classifier,setting_id,settings,accuracy,w_avg_precision,w_avg_recall,train_size,test_size,report_table
-MaxEnt,s0,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk']]",0.9070385126162018,0.9059745835620663,0.9070385126162018,83,753,"                  GUI       LOGIC  ...   macro avg  weighted avg
-precision    0.976351    0.893557  ...    0.759582      0.905975
-recall       0.932258    0.924638  ...    0.719449      0.907039
-f1-score     0.953795    0.908832  ...    0.728706      0.905398
-support    310.000000  345.000000  ...  753.000000    753.000000
-Test       310.000000  345.000000  ...         NaN           NaN
-Train       34.000000   38.000000  ...         NaN           NaN
-Total      344.000000  383.000000  ...         NaN           NaN
+classifier,setting_id,settings,accuracy,macro_avg_precision,macro_avg_recall,train_size,test_size,report_table
+MaxEnt,s0,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk']]",0.8776595744680851,0.6517060191806072,0.700652496332479,83,752,"                  GUI       LOGIC      MODEL       PREF  accuracy   macro avg  \
+precision    0.976744    0.940397   0.578571   0.111111   0.87766    0.651706   
+recall       0.948387    0.823188   0.931034   0.100000   0.87766    0.700652   
+f1-score     0.962357    0.877898   0.713656   0.105263   0.87766    0.664794   
+support    310.000000  345.000000  87.000000  10.000000   0.87766  752.000000   
+Test       310.000000  345.000000  87.000000  10.000000       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.000000       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.000000       NaN         NaN   
 
-[7 rows x 7 columns]"
-SVM,s0,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk']]",0.9043824701195219,0.9007652521121604,0.9043824701195219,83,753,"                  GUI       LOGIC  ...   macro avg  weighted avg
-precision    0.976510    0.915205  ...    0.644804      0.900765
-recall       0.938710    0.907246  ...    0.682753      0.904382
-f1-score     0.957237    0.911208  ...    0.660579      0.900979
-support    310.000000  345.000000  ...  753.000000    753.000000
-Test       310.000000  345.000000  ...         NaN           NaN
-Train       34.000000   38.000000  ...         NaN           NaN
-Total      344.000000  383.000000  ...         NaN           NaN
+           weighted avg  
+precision      0.902493  
+recall         0.877660  
+f1-score       0.883439  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+SVM,s0,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk']]",0.875,0.62001372246538,0.6479135432283858,83,752,"                  GUI       LOGIC      MODEL  PREF  accuracy   macro avg  \
+precision    0.996429    0.856354   0.627273   0.0     0.875    0.620014   
+recall       0.900000    0.898551   0.793103   0.0     0.875    0.647914   
+f1-score     0.945763    0.876945   0.700508   0.0     0.875    0.630804   
+support    310.000000  345.000000  87.000000  10.0     0.875  752.000000   
+Test       310.000000  345.000000  87.000000  10.0       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.0       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.0       NaN         NaN   
 
-[7 rows x 7 columns]"
-Naive-Bayes,s0,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk']]",0.899070385126162,0.8979475500814079,0.899070385126162,83,753,"                  GUI       LOGIC  ...   macro avg  weighted avg
-precision    0.920732    0.896848  ...    0.906450      0.897948
-recall       0.974194    0.907246  ...    0.708082      0.899070
-f1-score     0.946708    0.902017  ...    0.753699      0.894492
-support    310.000000  345.000000  ...  753.000000    753.000000
-Test       310.000000  345.000000  ...         NaN           NaN
-Train       34.000000   38.000000  ...         NaN           NaN
-Total      344.000000  383.000000  ...         NaN           NaN
+           weighted avg  
+precision      0.876207  
+recall         0.875000  
+f1-score       0.873240  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+Naive-Bayes,s0,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk']]",0.8696808510638298,0.8752459023084207,0.6859517821734294,83,752,"                  GUI       LOGIC      MODEL       PREF  accuracy   macro avg  \
+precision    0.887195    0.891566   0.722222   1.000000  0.869681    0.875246   
+recall       0.938710    0.857971   0.747126   0.200000  0.869681    0.685952   
+f1-score     0.912226    0.874446   0.734463   0.333333  0.869681    0.713617   
+support    310.000000  345.000000  87.000000  10.000000  0.869681  752.000000   
+Test       310.000000  345.000000  87.000000  10.000000       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.000000       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.000000       NaN         NaN   
 
-[7 rows x 7 columns]"
+           weighted avg  
+precision      0.871615  
+recall         0.869681  
+f1-score       0.866630  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+MaxEnt,s1,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw']]",0.8204787234042553,0.8215985878891809,0.574307604262385,83,752,"                  GUI       LOGIC      MODEL       PREF  accuracy   macro avg  \
+precision    0.988593    0.762590   0.535211   1.000000  0.820479    0.821599   
+recall       0.838710    0.921739   0.436782   0.100000  0.820479    0.574308   
+f1-score     0.907504    0.834646   0.481013   0.181818  0.820479    0.601245   
+support    310.000000  345.000000  87.000000  10.000000  0.820479  752.000000   
+Test       310.000000  345.000000  87.000000  10.000000       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.000000       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.000000       NaN         NaN   
+
+           weighted avg  
+precision      0.832607  
+recall         0.820479  
+f1-score       0.815087  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+SVM,s1,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw']]",0.7965425531914894,0.8074232990302701,0.5835932840031597,83,752,"                  GUI       LOGIC      MODEL       PREF  accuracy   macro avg  \
+precision    0.942085    0.766332   0.521277   1.000000  0.796543    0.807423   
+recall       0.787097    0.884058   0.563218   0.100000  0.796543    0.583593   
+f1-score     0.857645    0.820996   0.541436   0.181818  0.796543    0.600474   
+support    310.000000  345.000000  87.000000  10.000000  0.796543  752.000000   
+Test       310.000000  345.000000  87.000000  10.000000       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.000000       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.000000       NaN         NaN   
+
+           weighted avg  
+precision      0.813540  
+recall         0.796543  
+f1-score       0.795262  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+Naive-Bayes,s1,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw']]",0.7965425531914894,0.7899643126915854,0.5251196982154085,83,752,"                  GUI       LOGIC      MODEL       PREF  accuracy   macro avg  \
+precision    0.801653    0.817664   0.540541   1.000000  0.796543    0.789964   
+recall       0.938710    0.831884   0.229885   0.100000  0.796543    0.525120   
+f1-score     0.864785    0.824713   0.322581   0.181818  0.796543    0.548474   
+support    310.000000  345.000000  87.000000  10.000000  0.796543  752.000000   
+Test       310.000000  345.000000  87.000000  10.000000       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.000000       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.000000       NaN         NaN   
+
+           weighted avg  
+precision      0.781427  
+recall         0.796543  
+f1-score       0.774590  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+MaxEnt,s2,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7912234042553191,0.6605936215788845,0.580901081717206,83,752,"                  GUI       LOGIC      MODEL       PREF  accuracy   macro avg  \
+precision    0.923345    0.767810   0.451220   0.500000  0.791223    0.660594   
+recall       0.854839    0.843478   0.425287   0.200000  0.791223    0.580901   
+f1-score     0.887772    0.803867   0.437870   0.285714  0.791223    0.603806   
+support    310.000000  345.000000  87.000000  10.000000  0.791223  752.000000   
+Test       310.000000  345.000000  87.000000  10.000000       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.000000       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.000000       NaN         NaN   
+
+           weighted avg  
+precision      0.791739  
+recall         0.791223  
+f1-score       0.789223  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+SVM,s2,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7805851063829787,0.5455422794117647,0.5211918234431171,83,752,"                  GUI       LOGIC      MODEL  PREF  accuracy   macro avg  \
+precision    0.900000    0.735294   0.546875   0.0  0.780585    0.545542   
+recall       0.812903    0.869565   0.402299   0.0  0.780585    0.521192   
+f1-score     0.854237    0.796813   0.463576   0.0  0.780585    0.528657   
+support    310.000000  345.000000  87.000000  10.0  0.780585  752.000000   
+Test       310.000000  345.000000  87.000000  10.0       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.0       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.0       NaN         NaN   
+
+           weighted avg  
+precision      0.771615  
+recall         0.780585  
+f1-score       0.771337  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+Naive-Bayes,s2,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7952127659574468,0.5839870630333058,0.5233488094662346,83,752,"                  GUI       LOGIC      MODEL  PREF  accuracy   macro avg  \
+precision    0.785714    0.812139   0.738095   0.0  0.795213    0.583987   
+recall       0.922581    0.814493   0.356322   0.0  0.795213    0.523349   
+f1-score     0.848665    0.813314   0.480620   0.0  0.795213    0.535650   
+support    310.000000  345.000000  87.000000  10.0  0.795213  752.000000   
+Test       310.000000  345.000000  87.000000  10.0       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.0       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.0       NaN         NaN   
+
+           weighted avg  
+precision      0.781880  
+recall         0.795213  
+f1-score       0.778582  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+MaxEnt,s3,"[['pac', 'tow', 'jk'], ['lib', 'tow', 'scw', 'jk', 'lc', 'stem'], ['pm', 'tow', 'scw', 'jk', 'lc', 'sw']]",0.8085106382978723,0.7299736849845861,0.6142049942770551,83,752,"                  GUI       LOGIC      MODEL       PREF  accuracy   macro avg  \
+precision    0.887417    0.801105   0.564706   0.666667  0.808511    0.729974   
+recall       0.864516    0.840580   0.551724   0.200000  0.808511    0.614205   
+f1-score     0.875817    0.820368   0.558140   0.307692  0.808511    0.640504   
+support    310.000000  345.000000  87.000000  10.000000  0.808511  752.000000   
+Test       310.000000  345.000000  87.000000  10.000000       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.000000       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.000000       NaN         NaN   
+
+           weighted avg  
+precision      0.807549  
+recall         0.808511  
+f1-score       0.806071  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+SVM,s3,"[['pac', 'tow', 'jk'], ['lib', 'tow', 'scw', 'jk', 'lc', 'stem'], ['pm', 'tow', 'scw', 'jk', 'lc', 'sw']]",0.8045212765957447,0.5552944076977908,0.5263759249407555,83,752,"                  GUI       LOGIC      MODEL  PREF  accuracy   macro avg  \
+precision    0.928826    0.757869   0.534483   0.0  0.804521    0.555294   
+recall       0.841935    0.907246   0.356322   0.0  0.804521    0.526376   
+f1-score     0.883249    0.825858   0.427586   0.0  0.804521    0.534173   
+support    310.000000  345.000000  87.000000  10.0  0.804521  752.000000   
+Test       310.000000  345.000000  87.000000  10.0       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.0       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.0       NaN         NaN   
+
+           weighted avg  
+precision      0.792421  
+recall         0.804521  
+f1-score       0.792457  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+Naive-Bayes,s3,"[['pac', 'tow', 'jk'], ['lib', 'tow', 'scw', 'jk', 'lc', 'stem'], ['pm', 'tow', 'scw', 'jk', 'lc', 'sw']]",0.8098404255319149,0.5793488807842875,0.5207388241363189,83,752,"                  GUI       LOGIC      MODEL  PREF  accuracy   macro avg  \
+precision    0.820513    0.812672   0.684211   0.0   0.80984    0.579349   
+recall       0.929032    0.855072   0.298851   0.0   0.80984    0.520739   
+f1-score     0.871407    0.833333   0.416000   0.0   0.80984    0.530185   
+support    310.000000  345.000000  87.000000  10.0   0.80984  752.000000   
+Test       310.000000  345.000000  87.000000  10.0       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.0       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.0       NaN         NaN   
+
+           weighted avg  
+precision      0.790236  
+recall         0.809840  
+f1-score       0.789665  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+MaxEnt,s4,"[['lib', 'tow', 'scw', 'jk', 'lc', 'stem'], ['pac', 'tow', 'jk'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pm', 'tow', 'scw', 'jk', 'lc', 'sw', 'stem'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7965425531914894,0.7871716088232951,0.5426601215521272,83,752,"                  GUI       LOGIC      MODEL       PREF  accuracy   macro avg  \
+precision    0.881967    0.775194   0.491525   1.000000  0.796543    0.787172   
+recall       0.867742    0.869565   0.333333   0.100000  0.796543    0.542660   
+f1-score     0.874797    0.819672   0.397260   0.181818  0.796543    0.568387   
+support    310.000000  345.000000  87.000000  10.000000  0.796543  752.000000   
+Test       310.000000  345.000000  87.000000  10.000000       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.000000       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.000000       NaN         NaN   
+
+           weighted avg  
+precision      0.789381  
+recall         0.796543  
+f1-score       0.785045  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+SVM,s4,"[['lib', 'tow', 'scw', 'jk', 'lc', 'stem'], ['pac', 'tow', 'jk'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pm', 'tow', 'scw', 'jk', 'lc', 'sw', 'stem'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7925531914893617,0.5865169062414999,0.5642880172816818,83,752,"                  GUI       LOGIC      MODEL       PREF  accuracy   macro avg  \
+precision    0.903333    0.793296   0.449438   0.200000  0.792553    0.586517   
+recall       0.874194    0.823188   0.459770   0.100000  0.792553    0.564288   
+f1-score     0.888525    0.807966   0.454545   0.133333  0.792553    0.571092   
+support    310.000000  345.000000  87.000000  10.000000  0.792553  752.000000   
+Test       310.000000  345.000000  87.000000  10.000000       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.000000       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.000000       NaN         NaN   
+
+           weighted avg  
+precision      0.790986  
+recall         0.792553  
+f1-score       0.791316  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+Naive-Bayes,s4,"[['lib', 'tow', 'scw', 'jk', 'lc', 'stem'], ['pac', 'tow', 'jk'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pm', 'tow', 'scw', 'jk', 'lc', 'sw', 'stem'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.8111702127659575,0.5803819617681858,0.5084880946623462,83,752,"                  GUI       LOGIC      MODEL  PREF  accuracy   macro avg  \
+precision    0.810734    0.821138   0.689655   0.0   0.81117    0.580382   
+recall       0.925806    0.878261   0.229885   0.0   0.81117    0.508488   
+f1-score     0.864458    0.848739   0.344828   0.0   0.81117    0.514506   
+support    310.000000  345.000000  87.000000  10.0   0.81117  752.000000   
+Test       310.000000  345.000000  87.000000  10.0       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.0       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.0       NaN         NaN   
+
+           weighted avg  
+precision      0.790719  
+recall         0.811170  
+f1-score       0.785634  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+MaxEnt,s5,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7925531914893617,0.5438413131490935,0.5375364736986346,83,752,"                  GUI       LOGIC      MODEL  PREF  accuracy   macro avg  \
+precision    0.892977    0.769231   0.513158   0.0  0.792553    0.543841   
+recall       0.861290    0.840580   0.448276   0.0  0.792553    0.537536   
+f1-score     0.876847    0.803324   0.478528   0.0  0.792553    0.539675   
+support    310.000000  345.000000  87.000000  10.0  0.792553  752.000000   
+Test       310.000000  345.000000  87.000000  10.0       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.0       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.0       NaN         NaN   
+
+           weighted avg  
+precision      0.780388  
+recall         0.792553  
+f1-score       0.785374  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+SVM,s5,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7819148936170213,0.8368140267681652,0.5209991778304397,83,752,"                  GUI       LOGIC      MODEL       PREF  accuracy   macro avg  \
+precision    0.966805    0.694737   0.685714   1.000000  0.781915    0.836814   
+recall       0.751613    0.956522   0.275862   0.100000  0.781915    0.520999   
+f1-score     0.845735    0.804878   0.393443   0.181818  0.781915    0.556468   
+support    310.000000  345.000000  87.000000  10.000000  0.781915  752.000000   
+Test       310.000000  345.000000  87.000000  10.000000       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.000000       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.000000       NaN         NaN   
+
+           weighted avg  
+precision      0.809908  
+recall         0.781915  
+f1-score       0.765836  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+Naive-Bayes,s5,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem']]",0.7965425531914894,0.5889811011767192,0.5051421869710306,83,752,"                  GUI       LOGIC      MODEL  PREF  accuracy   macro avg  \
+precision    0.780161    0.817143   0.758621   0.0  0.796543    0.588981   
+recall       0.938710    0.828986   0.252874   0.0  0.796543    0.505142   
+f1-score     0.852123    0.823022   0.379310   0.0  0.796543    0.513614   
+support    310.000000  345.000000  87.000000  10.0  0.796543  752.000000   
+Test       310.000000  345.000000  87.000000  10.0       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.0       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.0       NaN         NaN   
+
+           weighted avg  
+precision      0.784261  
+recall         0.796543  
+f1-score       0.772740  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+MaxEnt,s6,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw']]",0.7925531914893617,0.5416949465823815,0.5311715110186842,83,752,"                  GUI       LOGIC      MODEL  PREF  accuracy   macro avg  \
+precision    0.893333    0.766404   0.507042   0.0  0.792553    0.541695   
+recall       0.864516    0.846377   0.413793   0.0  0.792553    0.531172   
+f1-score     0.878689    0.804408   0.455696   0.0  0.792553    0.534698   
+support    310.000000  345.000000  87.000000  10.0  0.792553  752.000000   
+Test       310.000000  345.000000  87.000000  10.0       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.0       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.0       NaN         NaN   
+
+           weighted avg  
+precision      0.778531  
+recall         0.792553  
+f1-score       0.783989  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+SVM,s6,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw']]",0.7832446808510638,0.5588990627862898,0.5404269639373862,83,752,"                  GUI       LOGIC      MODEL  PREF  accuracy   macro avg  \
+precision    0.966805    0.725581   0.543210   0.0  0.783245    0.558899   
+recall       0.751613    0.904348   0.505747   0.0  0.783245    0.540427   
+f1-score     0.845735    0.805161   0.523810   0.0  0.783245    0.543676   
+support    310.000000  345.000000  87.000000  10.0  0.783245  752.000000   
+Test       310.000000  345.000000  87.000000  10.0       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.0       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.0       NaN         NaN   
+
+           weighted avg  
+precision      0.794274  
+recall         0.783245  
+f1-score       0.778630  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+Naive-Bayes,s6,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc', 'sw'], ['pv', 'tow', 'jk', 'scw', 'lc', 'sw'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc', 'sw']]",0.7952127659574468,0.536492170581376,0.4976435169512018,83,752,"                  GUI       LOGIC      MODEL  PREF  accuracy   macro avg  \
+precision    0.824713    0.793478   0.527778   0.0  0.795213    0.536492   
+recall       0.925806    0.846377   0.218391   0.0  0.795213    0.497644   
+f1-score     0.872340    0.819074   0.308943   0.0  0.795213    0.500089   
+support    310.000000  345.000000  87.000000  10.0  0.795213  752.000000   
+Test       310.000000  345.000000  87.000000  10.0       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.0       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.0       NaN         NaN   
+
+           weighted avg  
+precision      0.765063  
+recall         0.795213  
+f1-score       0.771123  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+MaxEnt,s7,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc'], ['pv', 'tow', 'jk', 'scw', 'lc'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc']]",0.7925531914893617,0.6573180410375533,0.5395862552594671,83,752,"                  GUI       LOGIC      MODEL       PREF  accuracy   macro avg  \
+precision    0.898955    0.770000   0.460317   0.500000  0.792553    0.657318   
+recall       0.832258    0.892754   0.333333   0.100000  0.792553    0.539586   
+f1-score     0.864322    0.826846   0.386667   0.166667  0.792553    0.561125   
+support    310.000000  345.000000  87.000000  10.000000  0.792553  752.000000   
+Test       310.000000  345.000000  87.000000  10.000000       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.000000       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.000000       NaN         NaN   
+
+           weighted avg  
+precision      0.783741  
+recall         0.792553  
+f1-score       0.782591  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+SVM,s7,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc'], ['pv', 'tow', 'jk', 'scw', 'lc'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc']]",0.7819148936170213,0.6662669708675776,0.5501624187906047,83,752,"                  GUI       LOGIC      MODEL       PREF  accuracy   macro avg  \
+precision    0.961240    0.729469   0.474359   0.500000  0.781915    0.666267   
+recall       0.800000    0.875362   0.425287   0.100000  0.781915    0.550162   
+f1-score     0.873239    0.795784   0.448485   0.166667  0.781915    0.571044   
+support    310.000000  345.000000  87.000000  10.000000  0.781915  752.000000   
+Test       310.000000  345.000000  87.000000  10.000000       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.000000       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.000000       NaN         NaN   
+
+           weighted avg  
+precision      0.792447  
+recall         0.781915  
+f1-score       0.779168  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+Naive-Bayes,s7,"[['lib', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['pac', 'tow', 'jk'], ['pm', 'tow', 'jk', 'scw', 'lc'], ['pv', 'tow', 'jk', 'scw', 'lc'], ['com', 'tow', 'jk', 'scw', 'lc', 'sw', 'stem'], ['c', 'tow', 'jk', 'scw', 'lc']]",0.7938829787234043,0.5396322766464973,0.4946881398010672,83,752,"                  GUI       LOGIC      MODEL  PREF  accuracy   macro avg  \
+precision    0.833819    0.779255   0.545455   0.0  0.793883    0.539632   
+recall       0.922581    0.849275   0.206897   0.0  0.793883    0.494688   
+f1-score     0.875957    0.812760   0.300000   0.0  0.793883    0.497179   
+support    310.000000  345.000000  87.000000  10.0  0.793883  752.000000   
+Test       310.000000  345.000000  87.000000  10.0       NaN         NaN   
+Train       34.000000   38.000000  10.000000   1.0       NaN         NaN   
+Total      344.000000  383.000000  97.000000  11.0       NaN         NaN   
+
+           weighted avg  
+precision      0.764337  
+recall         0.793883  
+f1-score       0.768682  
+support      752.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "

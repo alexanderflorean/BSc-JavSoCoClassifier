@@ -1,31 +1,106 @@
-classifier,setting_id,settings,accuracy,w_avg_precision,w_avg_recall,train_size,test_size,report_table
-MaxEnt,s0,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk']]",0.8740157480314961,0.8829378977407774,0.8740157480314961,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
-precision            0.833333           1.00000  ...    0.872096      0.882938
-recall               0.555556           0.95122  ...    0.848134      0.874016
-f1-score             0.666667           0.97500  ...    0.853836      0.874257
-support              9.000000          41.00000  ...  762.000000    762.000000
-Test                 9.000000          41.00000  ...         NaN           NaN
-Train                1.000000           5.00000  ...         NaN           NaN
-Total               10.000000          46.00000  ...         NaN           NaN
+classifier,setting_id,settings,accuracy,macro_avg_precision,macro_avg_recall,train_size,test_size,report_table
+MaxEnt,s0,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk']]",0.8241469816272966,0.8230209383264849,0.7786908059411789,84,762,"           basicutils-6.9.126  graphviz-6.9.256  kitfox-6.9.6  log-6.9.380  \
+precision            1.000000           0.95122      0.950704     0.903030   
+recall               0.333333           0.95122      0.992647     0.741294   
+f1-score             0.500000           0.95122      0.971223     0.814208   
+support              9.000000          41.00000    136.000000   201.000000   
+Test                 9.000000          41.00000    136.000000   201.000000   
+Train                1.000000           5.00000     15.000000    22.000000   
+Total               10.000000          46.00000    151.000000   223.000000   
 
-[7 rows x 12 columns]"
-SVM,s0,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk']]",0.8622047244094488,0.8699156523959685,0.8622047244094488,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
-precision            1.000000          0.764706  ...    0.867240      0.869916
-recall               0.444444          0.951220  ...    0.786495      0.862205
-f1-score             0.615385          0.847826  ...    0.808695      0.860665
-support              9.000000         41.000000  ...  762.000000    762.000000
-Test                 9.000000         41.000000  ...         NaN           NaN
-Train                1.000000          5.000000  ...         NaN           NaN
-Total               10.000000         46.000000  ...         NaN           NaN
+           logskeleton-6.9.91  prom-contexts-6.9.56  prom-framework-6.9.97  \
+precision            0.573770              0.701754               0.771186   
+recall               0.777778              0.689655               0.805310   
+f1-score             0.660377              0.695652               0.787879   
+support             45.000000             58.000000             113.000000   
+Test                45.000000             58.000000             113.000000   
+Train                5.000000              6.000000              12.000000   
+Total               50.000000             64.000000             125.000000   
 
-[7 rows x 12 columns]"
-Naive-Bayes,s0,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk']]",0.8713910761154856,0.8835886806265764,0.8713910761154856,84,762,"           basicutils-6.9.126  graphviz-6.9.256  ...   macro avg  weighted avg
-precision            1.000000          1.000000  ...    0.898673      0.883589
-recall               0.333333          0.780488  ...    0.804928      0.871391
-f1-score             0.500000          0.876712  ...    0.829047      0.871877
-support              9.000000         41.000000  ...  762.000000    762.000000
-Test                 9.000000         41.000000  ...         NaN           NaN
-Train                1.000000          5.000000  ...         NaN           NaN
-Total               10.000000         46.000000  ...         NaN           NaN
+           prom-models-6.9.32  widgets-6.9.234  accuracy   macro avg  \
+precision            0.779661         0.775862  0.824147    0.823021   
+recall               0.867925         0.849057  0.824147    0.778691   
+f1-score             0.821429         0.810811  0.824147    0.779200   
+support             53.000000       106.000000  0.824147  762.000000   
+Test                53.000000       106.000000       NaN         NaN   
+Train                6.000000        12.000000       NaN         NaN   
+Total               59.000000       118.000000       NaN         NaN   
 
-[7 rows x 12 columns]"
+           weighted avg  
+precision      0.834690  
+recall         0.824147  
+f1-score       0.823909  
+support      762.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+SVM,s0,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk']]",0.8307086614173228,0.7651999682538314,0.7252990704853048,84,762,"           basicutils-6.9.126  graphviz-6.9.256  kitfox-6.9.6  log-6.9.380  \
+precision            0.250000          0.826087      0.964029     0.903226   
+recall               0.111111          0.926829      0.985294     0.835821   
+f1-score             0.153846          0.873563      0.974545     0.868217   
+support              9.000000         41.000000    136.000000   201.000000   
+Test                 9.000000         41.000000    136.000000   201.000000   
+Train                1.000000          5.000000     15.000000    22.000000   
+Total               10.000000         46.000000    151.000000   223.000000   
+
+           logskeleton-6.9.91  prom-contexts-6.9.56  prom-framework-6.9.97  \
+precision            0.794872              0.800000               0.801653   
+recall               0.688889              0.413793               0.858407   
+f1-score             0.738095              0.545455               0.829060   
+support             45.000000             58.000000             113.000000   
+Test                45.000000             58.000000             113.000000   
+Train                5.000000              6.000000              12.000000   
+Total               50.000000             64.000000             125.000000   
+
+           prom-models-6.9.32  widgets-6.9.234  accuracy   macro avg  \
+precision            0.891304         0.655629  0.830709    0.765200   
+recall               0.773585         0.933962  0.830709    0.725299   
+f1-score             0.828283         0.770428  0.830709    0.731277   
+support             53.000000       106.000000  0.830709  762.000000   
+Test                53.000000       106.000000       NaN         NaN   
+Train                6.000000        12.000000       NaN         NaN   
+Total               59.000000       118.000000       NaN         NaN   
+
+           weighted avg  
+precision      0.837622  
+recall         0.830709  
+f1-score       0.824605  
+support      762.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "
+Naive-Bayes,s0,"[['lib', 'tow', 'jk', 'scw', 'lc', 'stem'], ['pac', 'tow', 'jk']]",0.8280839895013123,0.8328508007163938,0.7499295036533883,84,762,"           basicutils-6.9.126  graphviz-6.9.256  kitfox-6.9.6  log-6.9.380  \
+precision            1.000000          1.000000      0.985294     0.858537   
+recall               0.222222          0.829268      0.985294     0.875622   
+f1-score             0.363636          0.906667      0.985294     0.866995   
+support              9.000000         41.000000    136.000000   201.000000   
+Test                 9.000000         41.000000    136.000000   201.000000   
+Train                1.000000          5.000000     15.000000    22.000000   
+Total               10.000000         46.000000    151.000000   223.000000   
+
+           logskeleton-6.9.91  prom-contexts-6.9.56  prom-framework-6.9.97  \
+precision            0.804348              0.566038               0.858586   
+recall               0.822222              0.517241               0.752212   
+f1-score             0.813187              0.540541               0.801887   
+support             45.000000             58.000000             113.000000   
+Test                45.000000             58.000000             113.000000   
+Train                5.000000              6.000000              12.000000   
+Total               50.000000             64.000000             125.000000   
+
+           prom-models-6.9.32  widgets-6.9.234  accuracy   macro avg  \
+precision            0.712329         0.710526  0.828084    0.832851   
+recall               0.981132         0.764151  0.828084    0.749930   
+f1-score             0.825397         0.736364  0.828084    0.759996   
+support             53.000000       106.000000  0.828084  762.000000   
+Test                53.000000       106.000000       NaN         NaN   
+Train                6.000000        12.000000       NaN         NaN   
+Total               59.000000       118.000000       NaN         NaN   
+
+           weighted avg  
+precision      0.834227  
+recall         0.828084  
+f1-score       0.825552  
+support      762.000000  
+Test                NaN  
+Train               NaN  
+Total               NaN  "

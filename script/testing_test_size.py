@@ -6,7 +6,7 @@ import Graphs
 
 
 def testing_percentage(dataFrame, start, increment, finish, feature_vector):
-    fold_quantity = 10
+    fold_quantity = 100
     maxEnt_accuracy_test = []
     svm_accuracy_test = []
     naive_accuracy_test = []
@@ -65,7 +65,7 @@ def testing_percentage(dataFrame, start, increment, finish, feature_vector):
 
 
 def testing_abs_size(dataFrame, start, increment, finish, feature_vector):
-    fold_quantity = 10
+    fold_quantity = 100
     maxEnt_accuracy_test = []
     svm_accuracy_test = []
     naive_accuracy_test = []
