@@ -48,17 +48,17 @@ class Metric:
         )
 
     def get_precision_score(self):
-        return precision_score(
+        return [precision_score(
             self.y_test, self.y_pred, average="macro", zero_division=False
-        )
+        ), precision_score(self.y_test, self.y_pred, average="weighted", zero_division=False)]
 
     def get_accuracy_score(self):
         return accuracy_score(self.y_test, self.y_pred)
 
     def get_recall_score(self):
-        return recall_score(
+        return [recall_score(
             self.y_test, self.y_pred, average="macro", zero_division=False
-        )
+        ), recall_score(self.y_test, self.y_pred, average="weighted", zero_division=False)]
 
     def quantity_table(self):
         cf_report = self.get_classification_report()
