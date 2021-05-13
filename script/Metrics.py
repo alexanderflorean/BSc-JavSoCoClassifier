@@ -6,6 +6,7 @@ from sklearn.metrics import (
     confusion_matrix,
     precision_score,
     recall_score,
+    f1_score,
 )
 
 
@@ -57,6 +58,11 @@ class Metric:
 
     def get_recall_score(self):
         return [recall_score(
+            self.y_test, self.y_pred, average="macro", zero_division=False
+        ), recall_score(self.y_test, self.y_pred, average="weighted", zero_division=False)]
+
+    def get_f1_score(self):
+        return [f1_score(
             self.y_test, self.y_pred, average="macro", zero_division=False
         ), recall_score(self.y_test, self.y_pred, average="weighted", zero_division=False)]
 
